@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ArrowRight, Sparkles } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import {
@@ -17,10 +17,10 @@ import {
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { href: "/services", label: "Services" },
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#services", label: "Services", targetId: "services" },
+  { href: "/#work", label: "Work", targetId: "work" },
+  { href: "/#about", label: "About", targetId: "about" },
+  { href: "/#contact", label: "Contact", targetId: "contact" },
 ];
 
 export function Navbar() {
@@ -38,12 +38,26 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", `#${targetId}`);
+      }
+    }
+  };
+
   return (
     <header
       className={cn(
         "sticky top-0 z-40 w-full transition-all duration-200",
         isScrolled
-          ? "bg-[var(--surface)]/90 backdrop-blur-md border-b border-[var(--border)] shadow-sm"
+          ? "bg-[var(--surface)]/90 backdrop-blur-md border-b border-[var(--border)] shadow-xs"
           : "bg-transparent border-b border-transparent"
       )}
     >
@@ -62,32 +76,25 @@ export function Navbar() {
 
         {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-8 text-sm">
-          {NAV_LINKS.map((link) => {
-            const isActive = pathname === link.href || pathname.startsWith(`${link.href}/`);
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "transition-colors duration-150 relative py-1",
-                  isActive
-                    ? "text-[var(--fg)] font-medium"
-                    : "text-[var(--fg-muted)] hover:text-[var(--fg)]"
-                )}
-              >
-                {link.label}
-                {isActive && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[var(--accent)] rounded-full" />
-                )}
-              </Link>
-            );
-          })}
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.targetId)}
+              className="transition-colors duration-150 relative py-1 text-[var(--fg-muted)] hover:text-[var(--fg)] cursor-pointer"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
 
         {/* Desktop actions: Theme toggle + CTA */}
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
-          <Link href="/contact">
+          <Link
+            href="/#contact"
+            onClick={(e) => handleNavClick(e, "contact")}
+          >
             <Button size="sm" variant="default" className="gap-1.5 h-9 font-medium">
               <span>Start a project</span>
               <ArrowRight className="h-3.5 w-3.5" />
@@ -123,12 +130,8 @@ export function Navbar() {
                     <SheetClose asChild key={link.href}>
                       <Link
                         href={link.href}
-                        className={cn(
-                          "text-base py-2 border-b border-[var(--border)]/40 transition-colors",
-                          pathname === link.href
-                            ? "text-[var(--fg)] font-medium"
-                            : "text-[var(--fg-muted)] hover:text-[var(--fg)]"
-                        )}
+                        onClick={(e) => handleNavClick(e, link.targetId)}
+                        className="text-base py-2 border-b border-[var(--border)]/40 transition-colors text-[var(--fg-muted)] hover:text-[var(--fg)]"
                       >
                         {link.label}
                       </Link>
@@ -154,7 +157,11 @@ export function Navbar() {
                   </span>
                 </div>
                 <SheetClose asChild>
-                  <Link href="/contact" className="w-full block">
+                  <Link
+                    href="/#contact"
+                    onClick={(e) => handleNavClick(e, "contact")}
+                    className="w-full block"
+                  >
                     <Button className="w-full gap-2">
                       <span>Start a project</span>
                       <ArrowRight className="h-4 w-4" />

@@ -38,7 +38,7 @@ const STEPS = [
 
 export function ProcessSection() {
   return (
-    <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section id="about" className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       <SectionReveal>
         <div className="space-y-3">
           <div className="eyebrow">ENGINEERING LIFECYCLE</div>
