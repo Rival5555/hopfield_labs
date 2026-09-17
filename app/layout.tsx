@@ -82,7 +82,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg)] text-[var(--fg)] min-h-screen selection:bg-[var(--accent)] selection:text-white flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg)] text-[var(--fg)] min-h-dvh selection:bg-[var(--accent)] selection:text-white flex flex-col`}
       >
         <div className="fixed inset-0 pointer-events-none noise-overlay z-50 opacity-40" />
         <Navbar />

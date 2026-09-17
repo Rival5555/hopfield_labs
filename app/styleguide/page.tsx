@@ -123,7 +123,7 @@ export default function StyleguidePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[var(--bg)] text-[var(--fg)] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-dvh bg-[var(--bg)] text-[var(--fg)] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-20">
         {/* Top bar */}
         <header className="border-b border-[var(--border)] pb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">

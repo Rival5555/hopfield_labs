@@ -127,7 +127,7 @@ export function Footer() {
                   href="https://github.com/Rival5555/hopfield_labs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors inline-flex items-center gap-2"
+                  className="text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors inline-flex items-center gap-2 py-1"
                 >
                   <Github className="h-4 w-4" />
                   <span>GitHub</span>
@@ -138,7 +138,7 @@ export function Footer() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors inline-flex items-center gap-2"
+                  className="text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors inline-flex items-center gap-2 py-1"
                 >
                   <Linkedin className="h-4 w-4" />
                   <span>LinkedIn</span>
@@ -149,7 +149,7 @@ export function Footer() {
                   href="https://x.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors inline-flex items-center gap-2"
+                  className="text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors inline-flex items-center gap-2 py-1"
                 >
                   <Twitter className="h-4 w-4" />
                   <span>Twitter / X</span>
@@ -162,20 +162,20 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-[var(--border)] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[var(--fg-muted)]">
           <p>© 2026 Hopfield Labs. All rights reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-6 gap-y-2 text-center sm:text-right">
             <Link
               href="/privacy"
-              className="hover:text-[var(--fg)] transition-colors"
+              className="hover:text-[var(--fg)] transition-colors py-1 inline-block"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="hover:text-[var(--fg)] transition-colors"
+              className="hover:text-[var(--fg)] transition-colors py-1 inline-block"
             >
               Terms of Service
             </Link>
-            <span>ENERGY LANDSCAPE ARCHITECTURE</span>
+            <span className="hidden sm:inline">ENERGY LANDSCAPE ARCHITECTURE</span>
           </div>
         </div>
       </div>

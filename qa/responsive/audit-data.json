@@ -1,0 +1,2859 @@
+[
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 4,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 131,
+          "height": 40
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "VIEW ALL SERVICES",
+          "width": 288,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "12px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/320px.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "button",
+          "text": "What is your typical",
+          "width": 238,
+          "height": 27
+        },
+        {
+          "tag": "button",
+          "text": "How does FYP mentori",
+          "width": 236,
+          "height": 27
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "12px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/375px.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 5,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "EXPLORE ALL PROJECTS",
+          "width": 604,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "Book FYP Strategy Se",
+          "width": 251,
+          "height": 21
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/375px-landscape.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "button",
+          "text": "What is your typical",
+          "width": 238,
+          "height": 27
+        },
+        {
+          "tag": "button",
+          "text": "How does FYP mentori",
+          "width": 236,
+          "height": 27
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "12px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/414px.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Services",
+          "width": 49,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Work",
+          "width": 33,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "width": 38,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "width": 48,
+          "height": 28
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/768px.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/768px-landscape.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/1024px.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/1280px.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/1440px.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "home/1920px.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 9,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 131,
+          "height": 40
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Scope Full-Stack Pro",
+          "width": 174,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Scope Full-Stack Pro",
+          "width": 174,
+          "height": 32
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/320px.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 9,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Scope Full-Stack Pro",
+          "width": 174,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Scope Full-Stack Pro",
+          "width": 174,
+          "height": 32
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/375px.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Scope Full-Stack Pro",
+          "width": 174,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Scope Full-Stack Pro",
+          "width": 174,
+          "height": 32
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/375px-landscape.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 9,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Scope Full-Stack Pro",
+          "width": 174,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Scope Full-Stack Pro",
+          "width": 174,
+          "height": 32
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/414px.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Services",
+          "width": 49,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Work",
+          "width": 33,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "width": 38,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "width": 48,
+          "height": 28
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/768px.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/768px-landscape.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/1024px.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/1280px.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/1440px.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services/1920px.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 131,
+          "height": 40
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "All Services",
+          "width": 93,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/320px.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "All Services",
+          "width": 93,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/375px.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "All Services",
+          "width": 93,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/375px-landscape.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "All Services",
+          "width": 93,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/414px.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Services",
+          "width": 49,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Work",
+          "width": 33,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "width": 38,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "width": 48,
+          "height": 28
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/768px.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/768px-landscape.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/1024px.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/1280px.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/1440px.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "services-slug/1920px.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 9,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 131,
+          "height": 40
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Discuss Similar",
+          "width": 106,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Discuss Similar",
+          "width": 106,
+          "height": 32
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/320px.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 9,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Discuss Similar",
+          "width": 106,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Discuss Similar",
+          "width": 106,
+          "height": 32
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/375px.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Discuss Similar",
+          "width": 106,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Discuss Similar",
+          "width": 106,
+          "height": 32
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/375px-landscape.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 9,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "Discuss Similar",
+          "width": 106,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Discuss Similar",
+          "width": 106,
+          "height": 32
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/414px.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Services",
+          "width": 49,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Work",
+          "width": 33,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "width": 38,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "width": 48,
+          "height": 28
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/768px.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/768px-landscape.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/1024px.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/1280px.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/1440px.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work/1920px.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 131,
+          "height": 40
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "All Case Studies",
+          "width": 121,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/320px.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "All Case Studies",
+          "width": 121,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/375px.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "All Case Studies",
+          "width": 121,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/375px-landscape.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "All Case Studies",
+          "width": 121,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/414px.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Services",
+          "width": 49,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Work",
+          "width": 33,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "width": 38,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "width": 48,
+          "height": 28
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/768px.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/768px-landscape.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/1024px.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/1280px.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/1440px.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "work-slug/1920px.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 334,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": true,
+      "overflowingElements": [
+        "div.py-16.md:py-24.max-w-6xl (right: 334px vs viewport: 320px)"
+      ],
+      "smallTouchTargetsCount": 3,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 131,
+          "height": 40
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/320px.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 4,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/375px.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        },
+        {
+          "tag": "a",
+          "text": "Web Development",
+          "width": 115,
+          "height": 19
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/375px-landscape.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 4,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 164,
+          "height": 20
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/414px.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Services",
+          "width": 49,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Work",
+          "width": 33,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "width": 38,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "width": 48,
+          "height": 28
+        }
+      ],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/768px.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/768px-landscape.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/1024px.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/1280px.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/1440px.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": []
+    },
+    "screenshotRel": "about/1920px.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 8,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 131,
+          "height": 40
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "input",
+          "text": "INPUT",
+          "width": 238,
+          "height": 40
+        },
+        {
+          "tag": "input",
+          "text": "INPUT",
+          "width": 238,
+          "height": 40
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/320px.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 8,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "input",
+          "text": "INPUT",
+          "width": 293,
+          "height": 40
+        },
+        {
+          "tag": "input",
+          "text": "INPUT",
+          "width": 293,
+          "height": 40
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/375px.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "input",
+          "text": "INPUT",
+          "width": 277,
+          "height": 40
+        },
+        {
+          "tag": "input",
+          "text": "INPUT",
+          "width": 277,
+          "height": 40
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/375px-landscape.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 8,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "button",
+          "text": "LIGHT MODE",
+          "width": 113,
+          "height": 32
+        },
+        {
+          "tag": "button",
+          "text": "Open navigation menu",
+          "width": 36,
+          "height": 36
+        },
+        {
+          "tag": "input",
+          "text": "INPUT",
+          "width": 332,
+          "height": 40
+        },
+        {
+          "tag": "input",
+          "text": "INPUT",
+          "width": 332,
+          "height": 40
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/414px.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 10,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "HOPFIELD LABS",
+          "width": 166,
+          "height": 22
+        },
+        {
+          "tag": "a",
+          "text": "Services",
+          "width": 49,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Work",
+          "width": 33,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "width": 38,
+          "height": 28
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "width": 48,
+          "height": 28
+        }
+      ],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/768px.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/768px-landscape.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/1024px.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/1280px.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/1440px.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "smallTouchTargetsCount": 0,
+      "smallTouchTargets": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "screenshotRel": "contact/1920px.png"
+  }
+]

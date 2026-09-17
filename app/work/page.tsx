@@ -76,7 +76,7 @@ export default function WorkPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {ALL_PROJECTS.map((project, idx) => (
-          <Card key={project.slug} className="flex flex-col justify-between p-6 md:p-8 space-y-6">
+          <Card key={project.slug} className="flex flex-col justify-between p-5 sm:p-6 md:p-8 space-y-6">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <Badge variant="mono" className="text-[10px]">
@@ -131,8 +131,8 @@ export default function WorkPage() {
                   </Badge>
                 ))}
               </div>
-              <Link href="/#contact" className="shrink-0">
-                <Button size="sm" variant="outline" className="text-xs font-mono">
+              <Link href="/#contact" className="w-full sm:w-auto shrink-0">
+                <Button size="sm" variant="outline" className="w-full sm:w-auto min-h-[44px] sm:min-h-0 text-xs font-mono">
                   Discuss Similar
                 </Button>
               </Link>

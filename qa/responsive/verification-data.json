@@ -1,0 +1,1516 @@
+[
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "home/320px.png",
+    "afterScreenshotRel": "home/320px-fixed.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "home/375px.png",
+    "afterScreenshotRel": "home/375px-fixed.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "home/375px-landscape.png",
+    "afterScreenshotRel": "home/375px-landscape-fixed.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "home/414px.png",
+    "afterScreenshotRel": "home/414px-fixed.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "home/768px.png",
+    "afterScreenshotRel": "home/768px-fixed.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "home/768px-landscape.png",
+    "afterScreenshotRel": "home/768px-landscape-fixed.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "home/1024px.png",
+    "afterScreenshotRel": "home/1024px-fixed.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "home/1280px.png",
+    "afterScreenshotRel": "home/1280px-fixed.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "home/1440px.png",
+    "afterScreenshotRel": "home/1440px-fixed.png"
+  },
+  {
+    "page": "home",
+    "path": "/",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "Ask about deliverables, FYP mentorship, tech stack, or SLA...",
+          "fontSize": "14px"
+        },
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "home/1920px.png",
+    "afterScreenshotRel": "home/1920px-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/320px.png",
+    "afterScreenshotRel": "services/320px-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/375px.png",
+    "afterScreenshotRel": "services/375px-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/375px-landscape.png",
+    "afterScreenshotRel": "services/375px-landscape-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/414px.png",
+    "afterScreenshotRel": "services/414px-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/768px.png",
+    "afterScreenshotRel": "services/768px-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/768px-landscape.png",
+    "afterScreenshotRel": "services/768px-landscape-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/1024px.png",
+    "afterScreenshotRel": "services/1024px-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/1280px.png",
+    "afterScreenshotRel": "services/1280px-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/1440px.png",
+    "afterScreenshotRel": "services/1440px-fixed.png"
+  },
+  {
+    "page": "services",
+    "path": "/services",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services/1920px.png",
+    "afterScreenshotRel": "services/1920px-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/320px.png",
+    "afterScreenshotRel": "services-slug/320px-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/375px.png",
+    "afterScreenshotRel": "services-slug/375px-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/375px-landscape.png",
+    "afterScreenshotRel": "services-slug/375px-landscape-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/414px.png",
+    "afterScreenshotRel": "services-slug/414px-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/768px.png",
+    "afterScreenshotRel": "services-slug/768px-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/768px-landscape.png",
+    "afterScreenshotRel": "services-slug/768px-landscape-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/1024px.png",
+    "afterScreenshotRel": "services-slug/1024px-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/1280px.png",
+    "afterScreenshotRel": "services-slug/1280px-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/1440px.png",
+    "afterScreenshotRel": "services-slug/1440px-fixed.png"
+  },
+  {
+    "page": "services-slug",
+    "path": "/services/web-development",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "services-slug/1920px.png",
+    "afterScreenshotRel": "services-slug/1920px-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/320px.png",
+    "afterScreenshotRel": "work/320px-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/375px.png",
+    "afterScreenshotRel": "work/375px-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/375px-landscape.png",
+    "afterScreenshotRel": "work/375px-landscape-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/414px.png",
+    "afterScreenshotRel": "work/414px-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/768px.png",
+    "afterScreenshotRel": "work/768px-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/768px-landscape.png",
+    "afterScreenshotRel": "work/768px-landscape-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/1024px.png",
+    "afterScreenshotRel": "work/1024px-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/1280px.png",
+    "afterScreenshotRel": "work/1280px-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/1440px.png",
+    "afterScreenshotRel": "work/1440px-fixed.png"
+  },
+  {
+    "page": "work",
+    "path": "/work",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work/1920px.png",
+    "afterScreenshotRel": "work/1920px-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/320px.png",
+    "afterScreenshotRel": "work-slug/320px-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/375px.png",
+    "afterScreenshotRel": "work-slug/375px-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/375px-landscape.png",
+    "afterScreenshotRel": "work-slug/375px-landscape-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/414px.png",
+    "afterScreenshotRel": "work-slug/414px-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/768px.png",
+    "afterScreenshotRel": "work-slug/768px-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/768px-landscape.png",
+    "afterScreenshotRel": "work-slug/768px-landscape-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/1024px.png",
+    "afterScreenshotRel": "work-slug/1024px-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/1280px.png",
+    "afterScreenshotRel": "work-slug/1280px-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/1440px.png",
+    "afterScreenshotRel": "work-slug/1440px-fixed.png"
+  },
+  {
+    "page": "work-slug",
+    "path": "/work/aura-health",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "work-slug/1920px.png",
+    "afterScreenshotRel": "work-slug/1920px-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/320px.png",
+    "afterScreenshotRel": "about/320px-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/375px.png",
+    "afterScreenshotRel": "about/375px-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/375px-landscape.png",
+    "afterScreenshotRel": "about/375px-landscape-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/414px.png",
+    "afterScreenshotRel": "about/414px-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/768px.png",
+    "afterScreenshotRel": "about/768px-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/768px-landscape.png",
+    "afterScreenshotRel": "about/768px-landscape-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/1024px.png",
+    "afterScreenshotRel": "about/1024px-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/1280px.png",
+    "afterScreenshotRel": "about/1280px-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/1440px.png",
+    "afterScreenshotRel": "about/1440px-fixed.png"
+  },
+  {
+    "page": "about",
+    "path": "/about",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "about/1920px.png",
+    "afterScreenshotRel": "about/1920px-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "320px",
+    "width": 320,
+    "height": 568,
+    "label": "320px (iPhone SE)",
+    "metrics": {
+      "docScrollWidth": 320,
+      "windowInnerWidth": 320,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "contact/320px.png",
+    "afterScreenshotRel": "contact/320px-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "375px",
+    "width": 375,
+    "height": 667,
+    "label": "375px (iPhone 12/13/14)",
+    "metrics": {
+      "docScrollWidth": 375,
+      "windowInnerWidth": 375,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "contact/375px.png",
+    "afterScreenshotRel": "contact/375px-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "375px-landscape",
+    "width": 667,
+    "height": 375,
+    "label": "375px Landscape",
+    "metrics": {
+      "docScrollWidth": 667,
+      "windowInnerWidth": 667,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "contact/375px-landscape.png",
+    "afterScreenshotRel": "contact/375px-landscape-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "414px",
+    "width": 414,
+    "height": 896,
+    "label": "414px (Large Phone)",
+    "metrics": {
+      "docScrollWidth": 414,
+      "windowInnerWidth": 414,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": []
+    },
+    "beforeScreenshotRel": "contact/414px.png",
+    "afterScreenshotRel": "contact/414px-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "768px",
+    "width": 768,
+    "height": 1024,
+    "label": "768px (iPad Portrait)",
+    "metrics": {
+      "docScrollWidth": 768,
+      "windowInnerWidth": 768,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "contact/768px.png",
+    "afterScreenshotRel": "contact/768px-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "768px-landscape",
+    "width": 1024,
+    "height": 768,
+    "label": "768px Landscape",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "contact/768px-landscape.png",
+    "afterScreenshotRel": "contact/768px-landscape-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "1024px",
+    "width": 1024,
+    "height": 768,
+    "label": "1024px (Small Laptop)",
+    "metrics": {
+      "docScrollWidth": 1024,
+      "windowInnerWidth": 1024,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "contact/1024px.png",
+    "afterScreenshotRel": "contact/1024px-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "1280px",
+    "width": 1280,
+    "height": 800,
+    "label": "1280px (Laptop)",
+    "metrics": {
+      "docScrollWidth": 1280,
+      "windowInnerWidth": 1280,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "contact/1280px.png",
+    "afterScreenshotRel": "contact/1280px-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "1440px",
+    "width": 1440,
+    "height": 900,
+    "label": "1440px (Desktop)",
+    "metrics": {
+      "docScrollWidth": 1440,
+      "windowInnerWidth": 1440,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "contact/1440px.png",
+    "afterScreenshotRel": "contact/1440px-fixed.png"
+  },
+  {
+    "page": "contact",
+    "path": "/contact",
+    "breakpoint": "1920px",
+    "width": 1920,
+    "height": 1080,
+    "label": "1920px (Large Desktop)",
+    "metrics": {
+      "docScrollWidth": 1920,
+      "windowInnerWidth": 1920,
+      "hasHorizontalScroll": false,
+      "overflowingElements": [],
+      "inputsUnder16px": [
+        {
+          "name": "name",
+          "fontSize": "14px"
+        },
+        {
+          "name": "email",
+          "fontSize": "14px"
+        },
+        {
+          "name": "company",
+          "fontSize": "14px"
+        },
+        {
+          "name": "service",
+          "fontSize": "14px"
+        },
+        {
+          "name": "budget",
+          "fontSize": "14px"
+        },
+        {
+          "name": "message",
+          "fontSize": "14px"
+        }
+      ]
+    },
+    "beforeScreenshotRel": "contact/1920px.png",
+    "afterScreenshotRel": "contact/1920px-fixed.png"
+  }
+]

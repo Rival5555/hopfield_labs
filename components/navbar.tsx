@@ -116,10 +116,10 @@ export function Navbar() {
               <Button
                 variant="outline"
                 size="icon"
-                className="h-9 w-9"
+                className="h-11 w-11 min-h-[44px] min-w-[44px]"
                 aria-label="Open navigation menu"
               >
-                <Menu className="h-4 w-4" />
+                <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[85vw] max-w-sm flex flex-col justify-between">

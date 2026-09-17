@@ -29,18 +29,18 @@ export function ThemeToggle() {
       variant="outline"
       size="sm"
       onClick={toggleTheme}
-      className="h-8 px-2.5 font-mono text-xs gap-1.5"
+      className="min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:h-9 px-2.5 sm:px-3 font-mono text-xs gap-1.5"
       aria-label="Toggle theme"
     >
       {theme === "dark" ? (
         <>
-          <Sun className="h-3.5 w-3.5 text-[var(--signal)]" />
-          <span>LIGHT MODE</span>
+          <Sun className="h-4 w-4 text-[var(--signal)]" />
+          <span className="hidden sm:inline">LIGHT MODE</span>
         </>
       ) : (
         <>
-          <Moon className="h-3.5 w-3.5 text-[var(--accent)]" />
-          <span>DARK MODE</span>
+          <Moon className="h-4 w-4 text-[var(--accent)]" />
+          <span className="hidden sm:inline">DARK MODE</span>
         </>
       )}
     </Button>

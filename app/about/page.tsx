@@ -74,7 +74,7 @@ export default function AboutPage() {
           {PRINCIPLES.map((p) => {
             const Icon = p.icon;
             return (
-              <Card key={p.title} className="p-6 md:p-8 space-y-4">
+              <Card key={p.title} className="p-5 sm:p-6 md:p-8 space-y-4">
                 <div className="w-10 h-10 rounded-md border border-[var(--border)] bg-[var(--surface-2)] flex items-center justify-center text-[var(--signal)]">
                   <Icon className="h-5 w-5" />
                 </div>
@@ -101,7 +101,7 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {TEAM.map((member) => (
-            <Card key={member.name} className="p-6 md:p-8 space-y-4">
+            <Card key={member.name} className="p-5 sm:p-6 md:p-8 space-y-4">
               <div className="space-y-1">
                 <div className="text-xs font-mono text-[var(--signal)]">{member.role}</div>
                 <h3 className="text-2xl font-medium text-[var(--fg)]">{member.name}</h3>
@@ -123,7 +123,7 @@ export default function AboutPage() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="p-8 md:p-12 border border-[var(--border)] rounded-[var(--radius)] bg-[var(--surface)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div className="p-5 sm:p-8 md:p-12 border border-[var(--border)] rounded-[var(--radius)] bg-[var(--surface)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div className="space-y-2 max-w-xl">
           <h3 className="text-2xl font-medium text-[var(--fg)]">
             Have a project in mind?
@@ -132,8 +132,8 @@ export default function AboutPage() {
             We review technical specifications within 12 hours. Let’s talk architecture, timelines, and deliverables.
           </p>
         </div>
-        <Link href="/#contact">
-          <Button size="lg" className="gap-2">
+        <Link href="/#contact" className="w-full sm:w-auto shrink-0">
+          <Button size="lg" className="w-full sm:w-auto gap-2">
             <span>Commence Project Brief</span>
             <ArrowRight className="h-4 w-4" />
           </Button>

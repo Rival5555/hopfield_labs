@@ -59,6 +59,11 @@ export function ProcessSection() {
           className="hidden md:block absolute top-7 left-12 right-12 h-[1px] bg-[var(--border)] -z-0"
           aria-hidden="true"
         />
+        {/* Connecting 1px line behind steps (mobile vertical) */}
+        <div
+          className="block md:hidden absolute top-7 bottom-7 left-7 w-[1px] bg-[var(--border)] -z-0"
+          aria-hidden="true"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
           {STEPS.map((step, idx) => {

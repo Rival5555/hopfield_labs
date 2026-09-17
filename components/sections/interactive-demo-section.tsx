@@ -198,14 +198,14 @@ export function InteractiveDemoSection() {
           </div>
 
           {/* Preset prompt pills */}
-          <div className="p-3 bg-[var(--surface-2)]/50 border-t border-[var(--border)] flex flex-wrap gap-2">
+          <div className="p-3 bg-[var(--surface-2)]/50 border-t border-[var(--border)] flex flex-wrap items-center gap-2">
             <span className="eyebrow text-[10px] self-center mr-1">SUGGESTED:</span>
             {PRESET_PROMPTS.map((p) => (
               <button
                 key={p}
                 onClick={() => handleSubmit(p)}
                 disabled={isLoading}
-                className="text-[11px] font-mono px-2.5 py-1 rounded bg-[var(--surface)] border border-[var(--border)] text-[var(--fg-muted)] hover:text-[var(--fg)] hover:border-[var(--border-strong)] transition-all cursor-pointer disabled:opacity-50"
+                className="text-xs font-mono px-3 py-2 min-h-[38px] rounded bg-[var(--surface)] border border-[var(--border)] text-[var(--fg-muted)] hover:text-[var(--fg)] hover:border-[var(--border-strong)] transition-all cursor-pointer disabled:opacity-50 inline-flex items-center"
               >
                 {p}
               </button>
@@ -225,13 +225,13 @@ export function InteractiveDemoSection() {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about deliverables, FYP mentorship, tech stack, or SLA..."
               disabled={isLoading}
-              className="font-mono text-xs sm:text-sm bg-[var(--surface-2)]"
+              className="font-mono text-base md:text-sm bg-[var(--surface-2)] min-h-[44px] h-11"
             />
             <Button
               type="submit"
               disabled={isLoading || !input.trim()}
               size="default"
-              className="gap-1.5 shrink-0 px-4"
+              className="gap-1.5 shrink-0 px-4 min-h-[44px] h-11"
               aria-label="Send question to AI concierge"
             >
               <Send className="h-4 w-4" />
