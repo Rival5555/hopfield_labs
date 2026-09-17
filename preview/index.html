@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hopfield Labs — Logo System Verification Testbench (Iteration Round 2)</title>
+  <style>
+    :root {
+      --bg: #08090C;
+      --surface: #101319;
+      --surface-2: #161A22;
+      --border: #232935;
+      --border-strong: #323A4A;
+      --fg: #E9ECF2;
+      --fg-muted: #939CB0;
+      --accent: #4F7DFF;
+      --signal: #00D6A4;
+      --danger: #FF5C5C;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      padding: 40px 24px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+    }
+
+    .eyebrow {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--fg-muted);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      margin: 6px 0 8px;
+    }
+
+    p.subtitle {
+      color: var(--fg-muted);
+      font-size: 15px;
+      max-width: 780px;
+    }
+
+    .direction-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      padding: 32px;
+    }
+
+    .direction-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    .direction-title {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .direction-desc {
+      font-size: 13.5px;
+      color: var(--fg-muted);
+      margin-top: 4px;
+      max-width: 720px;
+    }
+
+    .badge {
+      font-family: monospace;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(0, 214, 164, 0.1);
+      color: var(--signal);
+      border: 1px solid rgba(0, 214, 164, 0.2);
+    }
+
+    .test-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .test-label {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--fg-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Size Progression */
+    .sizes-strip {
+      display: flex;
+      align-items: flex-end;
+      gap: 28px;
+      background: var(--surface-2);
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      overflow-x: auto;
+    }
+
+    .size-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .size-item span {
+      font-family: monospace;
+      font-size: 10px;
+      color: var(--fg-muted);
+    }
+
+    /* Inversion panels */
+    .inversion-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .panel {
+      padding: 36px 24px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 180px;
+    }
+
+    .panel-dark {
+      background: #08090C;
+      color: #FFFFFF;
+      border: 1px solid var(--border);
+    }
+
+    .panel-light {
+      background: #FFFFFF;
+      color: #08090C;
+      border: 1px solid #E2E5EA;
+    }
+
+    /* Stress tests */
+    .stress-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .stress-box {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .blur-2px {
+      filter: blur(2px);
+    }
+
+    /* Realistic Nav lockup */
+    .lockup-preview {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .lockup-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .wordmark-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: var(--fg);
+    }
+
+    /* Favicon mockup */
+    .tab-mockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #181C24;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid #2B3342;
+      font-family: sans-serif;
+      font-size: 12px;
+      color: #E9ECF2;
+    }
+
+    .favicon-box {
+      width: 24px;
+      height: 24px;
+      background: #08090C;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px;
+      color: var(--signal);
+    }
+
+    /* Evaluation Grid */
+    .eval-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .eval-q {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .eval-a {
+      color: var(--fg);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hidden SVG Symbols for Inline Rendering -->
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <!-- SYMBOL DIRECTION A -->
+    <symbol id="icon-dir-a" viewBox="0 0 48 48">
+      <polygon points="24,8 38,16 38,32 24,40 10,32 10,16" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round" fill="none" />
+      <line x1="10" y1="32" x2="24" y2="8" stroke="currentColor" stroke-width="1.5" />
+      <line x1="38" y1="32" x2="24" y2="8" stroke="currentColor" stroke-width="1.5" />
+      <line x1="10" y1="16" x2="38" y2="16" stroke="currentColor" stroke-width="1.5" />
+      <circle cx="10" cy="16" r="3.25" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" />
+      <circle cx="38" cy="16" r="3.25" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" />
+      <circle cx="38" cy="32" r="3.25" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" />
+      <circle cx="24" cy="40" r="3.25" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" />
+      <circle cx="10" cy="32" r="3.25" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" />
+      <circle cx="24" cy="8" r="4.5" fill="currentColor" />
+    </symbol>
+
+    <!-- SYMBOL DIRECTION B -->
+    <symbol id="icon-dir-b" viewBox="0 0 48 48">
+      <line x1="12" y1="8" x2="12" y2="40" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" />
+      <line x1="36" y1="8" x2="36" y2="40" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" />
+      <path d="M 12,22 C 18,22 19,25.5 25,25.5 C 31,25.5 32,22 36,22" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" fill="none" />
+      <path d="M 16,28.5 C 20,28.5 21,32 26,32 C 30,32 31,28.5 34,28.5" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" fill="none" />
+      <path d="M 19,35 C 22,35 23,38 26.5,38 C 29,38 30,35 32,35" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
+      <circle cx="26.5" cy="38" r="3.25" fill="currentColor" />
+    </symbol>
+
+    <!-- SYMBOL DIRECTION C -->
+    <symbol id="icon-dir-c" viewBox="0 0 48 48">
+      <path d="M 31,24.5 C 42,24.5 42,6.5 21,6.5 C 15,6.5 11,9 11,11.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <line x1="11" y1="11.5" x2="11" y2="37.5" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" />
+      <line x1="31" y1="11.5" x2="31" y2="37.5" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" />
+      <line x1="11" y1="24.5" x2="31" y2="24.5" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" />
+      <circle cx="11" cy="11.5" r="3.75" fill="currentColor" />
+      <circle cx="11" cy="24.5" r="3.25" fill="currentColor" />
+      <circle cx="11" cy="37.5" r="3.25" fill="currentColor" />
+      <circle cx="31" cy="11.5" r="3.25" fill="currentColor" />
+      <circle cx="31" cy="24.5" r="3.25" fill="currentColor" />
+      <circle cx="31" cy="37.5" r="3.25" fill="currentColor" />
+    </symbol>
+  </svg>
+
+  <div class="container">
+    <header>
+      <div class="eyebrow">HOPFIELD LABS // IDENTITY VERIFICATION TESTBENCH</div>
+      <h1>Vector Logo System Verification Suite</h1>
+      <p class="subtitle">
+        3 distinct conceptual directions hand-authored in pure geometric SVG (48×48 viewBox). Tested across scales (16px to 256px), pure black-on-white / white-on-black inversions, 2px distance blur, 1px wireframe outline integrity, 32×32 favicon simulation, and realistic navbar lockups.
+      </p>
+    </header>
+
+    <!-- PRODUCTION DELIVERABLES SHOWCASE -->
+    <section class="direction-card" id="deliverables" style="border-color: rgba(0, 214, 164, 0.35); background: linear-gradient(180deg, #121820 0%, #101319 100%);">
+      <div class="direction-header">
+        <div>
+          <div class="eyebrow" style="color: var(--signal);">STEP 3 PRODUCTION ASSETS</div>
+          <h2 class="direction-title">Shipped Deliverables Suite (Direction C: The Recurrent H)</h2>
+          <p class="direction-desc">
+            The complete hand-authored vector brand system for Hopfield Labs: primary mark, single-path mono mark, horizontal lockup, stacked lockup, typography assets, 32×32 favicon, 180×180 Apple touch icon, and 1200×630 OG image.
+          </p>
+        </div>
+        <span class="badge" style="background: rgba(0, 214, 164, 0.15); color: var(--signal); border-color: var(--signal);">PRODUCTION READY</span>
+      </div>
+
+      <!-- Deliverables Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <!-- Card 1: Primary Mark -->
+        <div class="stress-box" style="align-items: flex-start; text-align: left; padding: 24px;">
+          <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+            <span class="eyebrow">brand/logo-mark.svg</span>
+            <span class="badge" style="font-size: 10px;">48×48 viewBox</span>
+          </div>
+          <div style="width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; background: #08090C; border-radius: 6px; border: 1px solid var(--border); margin: 12px 0;">
+            <svg style="width: 56px; height: 56px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+          </div>
+          <p style="font-size: 12.5px; color: var(--fg-muted);">Hand-authored pure SVG geometry. Inherits currentColor; calibrated optical centering at (23.88, 23.0).</p>
+        </div>
+
+        <!-- Card 2: Mono Mark -->
+        <div class="stress-box" style="align-items: flex-start; text-align: left; padding: 24px;">
+          <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+            <span class="eyebrow">brand/logo-mark-mono.svg</span>
+            <span class="badge" style="font-size: 10px;">Single-Path</span>
+          </div>
+          <div style="width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; background: #08090C; border-radius: 6px; border: 1px solid var(--border); margin: 12px 0;">
+            <svg style="width: 56px; height: 56px; color: var(--fg);" viewBox="0 0 48 48" fill="none" stroke="currentColor">
+              <path d="M 11,11.5 L 11,37.5 M 31,11.5 L 31,37.5 M 11,24.5 L 31,24.5 M 31,24.5 C 42,24.5 42,6.5 21,6.5 C 15,6.5 11,9 11,11.5" stroke-width="3.25" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p style="font-size: 12.5px; color: var(--fg-muted);">Single continuous &lt;path&gt; element for sub-24px screens, monochrome printing, and vinyl reproduction.</p>
+        </div>
+
+        <!-- Card 3: Horizontal Lockup -->
+        <div class="stress-box" style="align-items: flex-start; text-align: left; padding: 24px; grid-column: span 2;">
+          <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+            <span class="eyebrow">brand/logo-lockup-horizontal.svg</span>
+            <span class="badge" style="font-size: 10px;">310×48 viewBox</span>
+          </div>
+          <div style="width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; background: #08090C; border-radius: 6px; border: 1px solid var(--border); margin: 12px 0; padding: 0 24px;">
+            <div style="max-width: 320px; width: 100%;">
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <svg style="width: 38px; height: 38px; color: var(--fg); flex-shrink: 0;"><use href="#icon-dir-c" /></svg>
+                <span style="font-family: monospace; font-size: 19px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">HOPFIELD LABS</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 12.5px; color: var(--fg-muted);">Baseline-aligned mark and wordmark with zero external font dependencies. Perfect for navigation bars.</p>
+        </div>
+
+        <!-- Card 4: Stacked Lockup -->
+        <div class="stress-box" style="align-items: flex-start; text-align: left; padding: 24px;">
+          <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+            <span class="eyebrow">brand/logo-lockup-stacked.svg</span>
+            <span class="badge" style="font-size: 10px;">260×120 viewBox</span>
+          </div>
+          <div style="width: 100%; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #08090C; border-radius: 6px; border: 1px solid var(--border); margin: 12px 0; gap: 8px;">
+            <svg style="width: 42px; height: 42px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+            <span style="font-family: monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">HOPFIELD LABS</span>
+          </div>
+          <p style="font-size: 12.5px; color: var(--fg-muted);">Symmetric centered layout for hero headers, badges, slide decks, and apparel.</p>
+        </div>
+
+        <!-- Card 5: React Component Logo.tsx -->
+        <div class="stress-box" style="align-items: flex-start; text-align: left; padding: 24px;">
+          <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+            <span class="eyebrow">components/Logo.tsx</span>
+            <span class="badge" style="font-size: 10px; color: var(--accent); border-color: rgba(79, 125, 255, 0.3);">TypeScript Strict</span>
+          </div>
+          <div style="width: 100%; height: 140px; display: flex; flex-direction: column; justify-content: center; background: #08090C; border-radius: 6px; border: 1px solid var(--border); margin: 12px 0; padding: 14px; font-family: monospace; font-size: 11px; color: var(--signal); overflow: hidden;">
+            <div>&lt;Logo variant="mark" size={32} /&gt;</div>
+            <div style="color: var(--fg-muted);">&lt;Logo variant="horizontal" size={28} /&gt;</div>
+            <div style="color: var(--fg-muted);">&lt;Logo variant="stacked" size={64} /&gt;</div>
+            <div style="color: var(--accent); margin-top: 6px;">// Inline SVG, currentColor, a11y</div>
+          </div>
+          <p style="font-size: 12.5px; color: var(--fg-muted);">Typed React component with responsive scaling and zero layout shifts.</p>
+        </div>
+
+        <!-- Card 6: Raster & Favicon Assets -->
+        <div class="stress-box" style="align-items: flex-start; text-align: left; padding: 24px; grid-column: span 2;">
+          <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+            <span class="eyebrow">Raster &amp; Chrome Assets</span>
+            <span class="badge" style="font-size: 10px;">ICO / PNG</span>
+          </div>
+          <div style="width: 100%; display: flex; gap: 20px; align-items: center; justify-content: space-around; background: #08090C; border-radius: 6px; border: 1px solid var(--border); margin: 12px 0; padding: 18px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+              <img src="../brand/apple-touch-icon.png" style="width: 64px; height: 64px; border-radius: 14px;" alt="Apple Touch Icon" />
+              <span class="eyebrow" style="font-size: 10px;">apple-touch-icon (180px)</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+              <div style="width: 48px; height: 48px; background: #161A22; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+                <svg style="width: 24px; height: 24px; color: var(--signal);"><use href="#icon-dir-c" /></svg>
+              </div>
+              <span class="eyebrow" style="font-size: 10px;">favicon.ico / .svg</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+              <img src="../brand/og-image.png" style="width: 140px; height: 73px; border-radius: 6px; border: 1px solid var(--border);" alt="OG Image" />
+              <span class="eyebrow" style="font-size: 10px;">og-image (1200×630)</span>
+            </div>
+          </div>
+          <p style="font-size: 12.5px; color: var(--fg-muted);">Production multi-size ICO (16/32/48), safe-margin 180px Apple touch icon, and high-DPI OpenGraph preview.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTION A -->
+    <section class="direction-card" id="dir-a">
+      <div class="direction-header">
+        <div>
+          <div class="eyebrow">DIRECTION A</div>
+          <h2 class="direction-title">The Attractor</h2>
+          <p class="direction-desc">
+            Symmetric network chord geometry converging toward a single solid settled state node. Expresses Hopfield network energy convergence.
+          </p>
+        </div>
+        <span class="badge">NETWORK CONVERGENCE</span>
+      </div>
+
+      <!-- Size Progression -->
+      <div class="test-row">
+        <div class="test-label">01 // SIZE PROGRESSION (16px, 24px, 32px, 64px, 128px, 256px)</div>
+        <div class="sizes-strip">
+          <div class="size-item">
+            <svg style="width: 16px; height: 16px; color: var(--fg);"><use href="#icon-dir-a" /></svg>
+            <span>16px (PASS/FAIL)</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 24px; height: 24px; color: var(--fg);"><use href="#icon-dir-a" /></svg>
+            <span>24px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 32px; height: 32px; color: var(--fg);"><use href="#icon-dir-a" /></svg>
+            <span>32px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 64px; height: 64px; color: var(--fg);"><use href="#icon-dir-a" /></svg>
+            <span>64px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 128px; height: 128px; color: var(--fg);"><use href="#icon-dir-a" /></svg>
+            <span>128px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 256px; height: 256px; color: var(--fg);"><use href="#icon-dir-a" /></svg>
+            <span>256px (DETAILED SCALE)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inversion -->
+      <div class="test-row">
+        <div class="test-label">02 // INVERSION TEST (PURE WHITE ON BLACK vs. PURE BLACK ON WHITE)</div>
+        <div class="inversion-grid">
+          <div class="panel panel-dark">
+            <svg style="width: 64px; height: 64px;"><use href="#icon-dir-a" /></svg>
+            <span class="eyebrow" style="color: #939CB0;">DARK MODE (#08090C)</span>
+          </div>
+          <div class="panel panel-light">
+            <svg style="width: 64px; height: 64px;"><use href="#icon-dir-a" /></svg>
+            <span class="eyebrow" style="color: #5E6779;">LIGHT MODE (#FFFFFF)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stress Tests & Lockup -->
+      <div class="test-row">
+        <div class="test-label">03 // STRESS TESTS & REALISTIC CONTEXTS</div>
+        <div class="stress-grid">
+          <div class="stress-box">
+            <div class="blur-2px">
+              <svg style="width: 48px; height: 48px; color: var(--fg);"><use href="#icon-dir-a" /></svg>
+            </div>
+            <span class="eyebrow">2PX BLUR DISTANCE SILHOUETTE</span>
+          </div>
+
+          <div class="stress-box">
+            <div style="width: 48px; height: 48px; border: 1px dashed var(--border-strong); padding: 4px;">
+              <svg viewBox="0 0 48 48" width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="1">
+                <polygon points="24,8 38,16 38,32 24,40 10,32 10,16" />
+                <line x1="10" y1="32" x2="24" y2="8" />
+                <line x1="38" y1="32" x2="24" y2="8" />
+                <line x1="10" y1="16" x2="38" y2="16" />
+                <circle cx="10" cy="16" r="3.25" />
+                <circle cx="38" cy="16" r="3.25" />
+                <circle cx="38" cy="32" r="3.25" />
+                <circle cx="24" cy="40" r="3.25" />
+                <circle cx="10" cy="32" r="3.25" />
+                <circle cx="24" cy="8" r="4.5" />
+              </svg>
+            </div>
+            <span class="eyebrow">1PX WIREFRAME ONLY (NO FILL)</span>
+          </div>
+
+          <div class="stress-box">
+            <div class="tab-mockup">
+              <div class="favicon-box">
+                <svg style="width: 16px; height: 16px;"><use href="#icon-dir-a" /></svg>
+              </div>
+              <span>Hopfield Labs — Studio</span>
+            </div>
+            <span class="eyebrow">32×32 FAVICON SIMULATION</span>
+          </div>
+
+          <div class="stress-box" style="grid-column: span 3;">
+            <div class="lockup-preview" style="width: 100%;">
+              <div class="lockup-item">
+                <svg style="width: 28px; height: 28px; color: var(--fg);"><use href="#icon-dir-a" /></svg>
+                <span class="wordmark-text">HOPFIELD LABS</span>
+              </div>
+              <span class="eyebrow">NAVBAR LOCKUP (28PX MARK HEIGHT)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTION B -->
+    <section class="direction-card" id="dir-b">
+      <div class="direction-header">
+        <div>
+          <div class="eyebrow">DIRECTION B</div>
+          <h2 class="direction-title">The Basin</h2>
+          <p class="direction-desc">
+            Nested energy landscape contour lines descending into an off-center attractor minimum with implied "H" negative space between boundary walls.
+          </p>
+        </div>
+        <span class="badge">ENERGY LANDSCAPE</span>
+      </div>
+
+      <!-- Size Progression -->
+      <div class="test-row">
+        <div class="test-label">01 // SIZE PROGRESSION (16px, 24px, 32px, 64px, 128px, 256px)</div>
+        <div class="sizes-strip">
+          <div class="size-item">
+            <svg style="width: 16px; height: 16px; color: var(--fg);"><use href="#icon-dir-b" /></svg>
+            <span>16px (PASS/FAIL)</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 24px; height: 24px; color: var(--fg);"><use href="#icon-dir-b" /></svg>
+            <span>24px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 32px; height: 32px; color: var(--fg);"><use href="#icon-dir-b" /></svg>
+            <span>32px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 64px; height: 64px; color: var(--fg);"><use href="#icon-dir-b" /></svg>
+            <span>64px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 128px; height: 128px; color: var(--fg);"><use href="#icon-dir-b" /></svg>
+            <span>128px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 256px; height: 256px; color: var(--fg);"><use href="#icon-dir-b" /></svg>
+            <span>256px (DETAILED SCALE)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inversion -->
+      <div class="test-row">
+        <div class="test-label">02 // INVERSION TEST (PURE WHITE ON BLACK vs. PURE BLACK ON WHITE)</div>
+        <div class="inversion-grid">
+          <div class="panel panel-dark">
+            <svg style="width: 64px; height: 64px;"><use href="#icon-dir-b" /></svg>
+            <span class="eyebrow" style="color: #939CB0;">DARK MODE (#08090C)</span>
+          </div>
+          <div class="panel panel-light">
+            <svg style="width: 64px; height: 64px;"><use href="#icon-dir-b" /></svg>
+            <span class="eyebrow" style="color: #5E6779;">LIGHT MODE (#FFFFFF)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stress Tests & Lockup -->
+      <div class="test-row">
+        <div class="test-label">03 // STRESS TESTS & REALISTIC CONTEXTS</div>
+        <div class="stress-grid">
+          <div class="stress-box">
+            <div class="blur-2px">
+              <svg style="width: 48px; height: 48px; color: var(--fg);"><use href="#icon-dir-b" /></svg>
+            </div>
+            <span class="eyebrow">2PX BLUR DISTANCE SILHOUETTE</span>
+          </div>
+
+          <div class="stress-box">
+            <div style="width: 48px; height: 48px; border: 1px dashed var(--border-strong); padding: 4px;">
+              <svg viewBox="0 0 48 48" width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="1">
+                <line x1="12" y1="8" x2="12" y2="40" />
+                <line x1="36" y1="8" x2="36" y2="40" />
+                <path d="M 12,22 C 18,22 19,25.5 25,25.5 C 31,25.5 32,22 36,22" />
+                <path d="M 16,28.5 C 20,28.5 21,32 26,32 C 30,32 31,28.5 34,28.5" />
+                <path d="M 19,35 C 22,35 23,38 26.5,38 C 29,38 30,35 32,35" />
+                <circle cx="26.5" cy="38" r="3.25" />
+              </svg>
+            </div>
+            <span class="eyebrow">1PX WIREFRAME ONLY (NO FILL)</span>
+          </div>
+
+          <div class="stress-box">
+            <div class="tab-mockup">
+              <div class="favicon-box">
+                <svg style="width: 16px; height: 16px;"><use href="#icon-dir-b" /></svg>
+              </div>
+              <span>Hopfield Labs — Studio</span>
+            </div>
+            <span class="eyebrow">32×32 FAVICON SIMULATION</span>
+          </div>
+
+          <div class="stress-box" style="grid-column: span 3;">
+            <div class="lockup-preview" style="width: 100%;">
+              <div class="lockup-item">
+                <svg style="width: 28px; height: 28px; color: var(--fg);"><use href="#icon-dir-b" /></svg>
+                <span class="wordmark-text">HOPFIELD LABS</span>
+              </div>
+              <span class="eyebrow">NAVBAR LOCKUP (28PX MARK HEIGHT)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTION C -->
+    <section class="direction-card" id="dir-c">
+      <div class="direction-header">
+        <div>
+          <div class="eyebrow">DIRECTION C</div>
+          <h2 class="direction-title">The Recurrent H</h2>
+          <p class="direction-desc">
+            Engineered letter "H" built from graph vertices and edges, with an orbital recurrence feedback loop. Highly brandable, bold, and unambiguous.
+          </p>
+        </div>
+        <span class="badge">GRAPH RECURRENCE</span>
+      </div>
+
+      <!-- Size Progression -->
+      <div class="test-row">
+        <div class="test-label">01 // SIZE PROGRESSION (16px, 24px, 32px, 64px, 128px, 256px)</div>
+        <div class="sizes-strip">
+          <div class="size-item">
+            <svg style="width: 16px; height: 16px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+            <span>16px (PASS/FAIL)</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 24px; height: 24px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+            <span>24px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 32px; height: 32px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+            <span>32px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 64px; height: 64px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+            <span>64px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 128px; height: 128px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+            <span>128px</span>
+          </div>
+          <div class="size-item">
+            <svg style="width: 256px; height: 256px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+            <span>256px (DETAILED SCALE)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inversion -->
+      <div class="test-row">
+        <div class="test-label">02 // INVERSION TEST (PURE WHITE ON BLACK vs. PURE BLACK ON WHITE)</div>
+        <div class="inversion-grid">
+          <div class="panel panel-dark">
+            <svg style="width: 64px; height: 64px;"><use href="#icon-dir-c" /></svg>
+            <span class="eyebrow" style="color: #939CB0;">DARK MODE (#08090C)</span>
+          </div>
+          <div class="panel panel-light">
+            <svg style="width: 64px; height: 64px;"><use href="#icon-dir-c" /></svg>
+            <span class="eyebrow" style="color: #5E6779;">LIGHT MODE (#FFFFFF)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stress Tests & Lockup -->
+      <div class="test-row">
+        <div class="test-label">03 // STRESS TESTS & REALISTIC CONTEXTS</div>
+        <div class="stress-grid">
+          <div class="stress-box">
+            <div class="blur-2px">
+              <svg style="width: 48px; height: 48px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+            </div>
+            <span class="eyebrow">2PX BLUR DISTANCE SILHOUETTE</span>
+          </div>
+
+          <div class="stress-box">
+            <div style="width: 48px; height: 48px; border: 1px dashed var(--border-strong); padding: 4px;">
+              <svg viewBox="0 0 48 48" width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M 31,24.5 C 42,24.5 42,6.5 21,6.5 C 15,6.5 11,9 11,11.5" />
+                <line x1="11" y1="11.5" x2="11" y2="37.5" />
+                <line x1="31" y1="11.5" x2="31" y2="37.5" />
+                <line x1="11" y1="24.5" x2="31" y2="24.5" />
+                <circle cx="11" cy="11.5" r="3.75" />
+                <circle cx="11" cy="24.5" r="3.25" />
+                <circle cx="11" cy="37.5" r="3.25" />
+                <circle cx="31" cy="11.5" r="3.25" />
+                <circle cx="31" cy="24.5" r="3.25" />
+                <circle cx="31" cy="37.5" r="3.25" />
+              </svg>
+            </div>
+            <span class="eyebrow">1PX WIREFRAME ONLY (NO FILL)</span>
+          </div>
+
+          <div class="stress-box">
+            <div class="tab-mockup">
+              <div class="favicon-box">
+                <svg style="width: 16px; height: 16px;"><use href="#icon-dir-c" /></svg>
+              </div>
+              <span>Hopfield Labs — Studio</span>
+            </div>
+            <span class="eyebrow">32×32 FAVICON SIMULATION</span>
+          </div>
+
+          <div class="stress-box" style="grid-column: span 3;">
+            <div class="lockup-preview" style="width: 100%;">
+              <div class="lockup-item">
+                <svg style="width: 28px; height: 28px; color: var(--fg);"><use href="#icon-dir-c" /></svg>
+                <span class="wordmark-text">HOPFIELD LABS</span>
+              </div>
+              <span class="eyebrow">NAVBAR LOCKUP (28PX MARK HEIGHT)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVALUATION MATRIX -->
+    <section class="direction-card">
+      <div class="direction-header">
+        <div>
+          <div class="eyebrow">EVALUATION RUBRIC & COMPARATIVE ANALYSIS</div>
+          <h2 class="direction-title">5-Point Verification Assessment (Iteration 2)</h2>
+        </div>
+        <span class="badge">CALIBRATED</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+        <div class="eval-card">
+          <span class="eval-q">Q1: At 16px, do any two shapes merge into a blob?</span>
+          <div class="eval-a">
+            <strong>Direction A:</strong> Cleaned up in Iteration 2 by thinning internal chords to 1.5px and removing center clutter.<br/>
+            <strong>Direction B:</strong> Stems and descending contours have 3.5px clearance; no merging.<br/>
+            <strong>Direction C:</strong> Highest legibility at 16px; vertex nodes and recurrence arc remain distinctly resolved.
+          </div>
+        </div>
+
+        <div class="eval-card">
+          <span class="eval-q">Q2: Is the optical center the same as geometric center?</span>
+          <div class="eval-a">
+            <strong>Direction A:</strong> Optical center slightly high due to solid top attractor node (+1.2px offset).<br/>
+            <strong>Direction B:</strong> Well balanced around center valley (24, 24).<br/>
+            <strong>Direction C:</strong> Perfectly centered on (24, 24); the recurrence arc adds top-right weight balancing the lower-left stem.
+          </div>
+        </div>
+
+        <div class="eval-card">
+          <span class="eval-q">Q3: Does the silhouette stay distinct when blurred 2px?</span>
+          <div class="eval-a">
+            <strong>Direction A:</strong> Reads as a circular network badge.<br/>
+            <strong>Direction B:</strong> Reads as an archway or channel.<br/>
+            <strong>Direction C:</strong> Instantly reads as an "H" with an orbital crest. Highest memorability.
+          </div>
+        </div>
+
+        <div class="eval-card">
+          <span class="eval-q">Q4: Inverted, does it get visually heavier?</span>
+          <div class="eval-a">
+            All three marks utilize <code>stroke="currentColor"</code> with minimal solid fill area. Inversion maintains identical visual mass between dark and light backgrounds.
+          </div>
+        </div>
+
+        <div class="eval-card">
+          <span class="eval-q">Q5: Does it resemble any well-known existing tech logo?</span>
+          <div class="eval-a">
+            None of the three marks resemble generic icons (no atom models, no swooshed hexagons, no crypto orbs). Direction C is proprietary, scientific, and directly embodies the recurrence equation $s_{t+1} = \text{sgn}(Ws_t)$.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

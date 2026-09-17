@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Logo } from "@/components/Logo";
 
 export function Footer() {
   return (
@@ -11,9 +12,9 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-5">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 font-mono text-sm tracking-[0.16em] uppercase font-bold text-[var(--fg)]"
+              className="inline-flex items-center gap-2.5 font-mono text-sm tracking-[0.16em] uppercase font-bold text-[var(--fg)] hover:text-white transition-colors"
             >
-              <span className="w-2 h-2 rounded-full bg-[var(--signal)]" />
+              <Logo variant="mark" size={20} className="text-[var(--signal)]" title="Hopfield Labs Logo" />
               <span>HOPFIELD LABS</span>
             </Link>
 

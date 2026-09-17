@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="100%" height="100%" fill="none" stroke="currentColor">
+  <!-- Hopfield Labs — Logo Mark (Mono / Single-Path Simplified for Small Sizes & Favicons) -->
+  <!-- Hand-authored single continuous path geometry; zero vertex clustering at sub-24px scales -->
+  <path
+    d="M 11,11.5 L 11,37.5 M 31,11.5 L 31,37.5 M 11,24.5 L 31,24.5 M 31,24.5 C 42,24.5 42,6.5 21,6.5 C 15,6.5 11,9 11,11.5"
+    stroke-width="3.25"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

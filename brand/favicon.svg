@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="100%" height="100%" fill="none" stroke="currentColor">
+  <!-- Hopfield Labs — Favicon (32×32 Grid, Optimized Padding & Visual Weight for Browser Chrome) -->
+  <!-- Scaled from 48×48 with 5px safe margin padding -->
+  <g fill="currentColor" stroke="currentColor">
+    <!-- Recurrence Loop -->
+    <path
+      d="M 20.5,17 C 28,17 28,5.5 14.5,5.5 C 10.5,5.5 8.5,7 8.5,8.5"
+      stroke-width="2.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
+    <!-- Stems & Crossbar -->
+    <line x1="8.5" y1="8.5" x2="8.5" y2="25.5" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="20.5" y1="8.5" x2="20.5" y2="25.5" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="8.5" y1="17" x2="20.5" y2="17" stroke-width="2.2" stroke-linecap="round" />
+    <!-- Attractor Vertex Nodes -->
+    <circle cx="8.5" cy="8.5" r="2.6" stroke="none" />
+    <circle cx="8.5" cy="17" r="2.2" stroke="none" />
+    <circle cx="8.5" cy="25.5" r="2.2" stroke="none" />
+    <circle cx="20.5" cy="8.5" r="2.2" stroke="none" />
+    <circle cx="20.5" cy="17" r="2.2" stroke="none" />
+    <circle cx="20.5" cy="25.5" r="2.2" stroke="none" />
+  </g>
+</svg>

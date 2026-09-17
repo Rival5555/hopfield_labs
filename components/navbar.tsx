@@ -15,6 +15,7 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/Logo";
 
 const NAV_LINKS = [
   { href: "/#services", label: "Services", targetId: "services" },
@@ -68,9 +69,14 @@ export function Navbar() {
         {/* Wordmark logo */}
         <Link
           href="/"
-          className="group flex items-center gap-2 font-mono text-sm tracking-[0.16em] uppercase font-bold text-[var(--fg)] hover:text-white transition-colors"
+          className="group flex items-center gap-2.5 font-mono text-sm tracking-[0.16em] uppercase font-bold text-[var(--fg)] hover:text-white transition-colors"
         >
-          <span className="inline-block w-2 h-2 rounded-full bg-[var(--signal)] group-hover:scale-125 transition-transform" />
+          <Logo
+            variant="mark"
+            size={22}
+            className="text-[var(--signal)] group-hover:scale-110 transition-transform"
+            title="Hopfield Labs Logo"
+          />
           <span>HOPFIELD LABS</span>
         </Link>
 
