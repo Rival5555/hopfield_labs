@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-signal: var(--signal);
+  --color-danger: var(--danger);
+  --radius-custom: var(--radius);
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+:root,
+[data-theme="dark"] {
+  --bg: #08090C;
+  --surface: #101319;
+  --surface-2: #161A22;
+  --border: #232935;
+  --border-strong: #323A4A;
+  --fg: #E9ECF2;
+  --fg-muted: #939CB0;
+  --accent: #4F7DFF;
+  --accent-soft: rgba(79, 125, 255, 0.1);
+  --signal: #00D6A4;
+  --danger: #FF5C5C;
+  --radius: 10px;
+}
+
+[data-theme="light"] {
+  --bg: #FAFAFB;
+  --surface: #FFFFFF;
+  --surface-2: #F1F3F7;
+  --border: #E1E5ED;
+  --border-strong: #C4CBD6;
+  --fg: #0A0B0F;
+  --fg-muted: #535D71;
+  --accent: #3A69F0;
+  --accent-soft: rgba(58, 105, 240, 0.08);
+  --signal: #00A880;
+  --danger: #E03636;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Engineered typography helpers */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--fg-muted);
+}
+
+.hero-heading {
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.section-heading {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.body-text {
+  font-size: 15px;
+  line-height: 1.625;
+  color: var(--fg-muted);
+}
+
+/* Subtle noise texture overlay */
+.noise-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Keyboard focus rings */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Card hover utility */
+.interactive-surface {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-surface:hover {
+  background-color: var(--surface-2);
+  border-color: var(--border-strong);
+}
