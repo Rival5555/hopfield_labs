@@ -147,15 +147,21 @@ Anonymous public writes (`anon` role) are rejected by RLS. Form submissions run 
 Run the following SQL in your Supabase SQL Editor:
 
 ```sql
--- Create the leads table
-create table public.leads (
+-- Create or extend the leads table
+create table if not exists public.leads (
   id uuid primary key default gen_random_uuid(),
   name text not null,
   email text not null,
   company text,
   service text not null,
+  stage text,
   budget text not null,
   message text not null,
+  heard_from text,
+  link_url text,
+  attachment_paths text[] default '{}'::text[],
+  estimate_shown_low integer,
+  estimate_shown_high integer,
   source text default 'website_contact_form',
   ip_hash text,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
@@ -169,7 +175,30 @@ create policy "Deny public access" on public.leads
   for all
   to anon, authenticated
   using (false);
+
+-- Create the intake_drafts table for save-and-resume functionality
+create table if not exists public.intake_drafts (
+  token text primary key,
+  payload jsonb not null,
+  email text,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- Enable RLS on drafts
+alter table public.intake_drafts enable row level security;
+
+create policy "Deny public access on intake_drafts" on public.intake_drafts
+  for all
+  to anon, authenticated
+  using (false);
 ```
+
+### Storage Bucket Configuration (`intake-attachments`)
+Uploads are sent directly to Supabase Storage via signed upload URLs generated in `app/actions/intake.ts`.
+- **Bucket**: `intake-attachments` (Private)
+- **Max file size**: 10MB per file (max 3 files)
+- **Allowed MIME types**: `application/pdf`, `application/msword`, `application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `image/png`, `image/jpeg`
+- **Read policy**: Restricted to service role signed URLs. Public read is disabled.
 
 ---
 

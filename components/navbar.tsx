@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/Logo";
+import { PillNav } from "@/components/nav/PillNav";
 
 const NAV_LINKS = [
   { href: "/#services", label: "Services", targetId: "services" },
@@ -80,27 +81,15 @@ export function Navbar() {
           <span>HOPFIELD LABS</span>
         </Link>
 
-        {/* Desktop nav links */}
-        <div className="hidden md:flex items-center gap-8 text-sm">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.targetId)}
-              className="transition-colors duration-150 relative py-1 text-[var(--fg-muted)] hover:text-[var(--fg)] cursor-pointer"
-            >
-              {link.label}
-            </Link>
-          ))}
+        {/* Desktop pill nav with sliding cursor-follow indicator */}
+        <div className="hidden md:flex items-center justify-center">
+          <PillNav />
         </div>
 
         {/* Desktop actions: Theme toggle + CTA */}
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
-          <Link
-            href="/#contact"
-            onClick={(e) => handleNavClick(e, "contact")}
-          >
+          <Link href="/start">
             <Button size="sm" variant="default" className="gap-1.5 h-9 font-medium">
               <span>Start a project</span>
               <ArrowRight className="h-3.5 w-3.5" />
@@ -163,11 +152,7 @@ export function Navbar() {
                   </span>
                 </div>
                 <SheetClose asChild>
-                  <Link
-                    href="/#contact"
-                    onClick={(e) => handleNavClick(e, "contact")}
-                    className="w-full block"
-                  >
+                  <Link href="/start" className="w-full block">
                     <Button className="w-full gap-2">
                       <span>Start a project</span>
                       <ArrowRight className="h-4 w-4" />

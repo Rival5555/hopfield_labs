@@ -47,7 +47,7 @@ export function HeroSection() {
 
         {/* Dual CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full max-w-sm sm:max-w-none">
-          <Link href="/contact" className="w-full sm:w-auto">
+          <Link href="/start" className="w-full sm:w-auto">
             <Button size="lg" className="w-full sm:w-auto gap-2 h-12 px-7">
               <span>Start a project</span>
               <ArrowRight className="h-4 w-4" />
