@@ -29,13 +29,23 @@ export function InteractiveDemoSection() {
   ]);
   const [input, setInput] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
-  const messagesEndRef = React.useRef<HTMLDivElement>(null);
+  const chatContainerRef = React.useRef<HTMLDivElement>(null);
+  const isInitialMount = React.useRef(true);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToBottom = (behavior: ScrollBehavior = "smooth") => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior,
+      });
+    }
   };
 
   React.useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     scrollToBottom();
   }, [messages]);
 
@@ -158,7 +168,10 @@ export function InteractiveDemoSection() {
           </div>
 
           {/* Messages window */}
-          <div className="p-4 sm:p-6 h-80 sm:h-96 overflow-y-auto space-y-4 font-mono text-xs sm:text-sm">
+          <div
+            ref={chatContainerRef}
+            className="p-4 sm:p-6 h-80 sm:h-96 overflow-y-auto space-y-4 font-mono text-xs sm:text-sm"
+          >
             {messages.map((m, idx) => (
               <div
                 key={idx}
@@ -194,7 +207,6 @@ export function InteractiveDemoSection() {
                 )}
               </div>
             ))}
-            <div ref={messagesEndRef} />
           </div>
 
           {/* Preset prompt pills */}

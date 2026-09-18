@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { ScrollRestoration } from "@/components/ScrollRestoration";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -84,6 +85,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg)] text-[var(--fg)] min-h-dvh selection:bg-[var(--accent)] selection:text-white flex flex-col`}
       >
+        <ScrollRestoration />
         <div className="fixed inset-0 pointer-events-none noise-overlay z-50 opacity-40" />
         <Navbar />
         <main className="flex-1 w-full flex flex-col">{children}</main>
