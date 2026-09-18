@@ -83,7 +83,7 @@ export function Navbar() {
 
         {/* Desktop pill nav with sliding cursor-follow indicator */}
         <div className="hidden md:flex items-center justify-center">
-          <PillNav />
+          <PillNav id="header-pill-nav" />
         </div>
 
         {/* Desktop actions: Theme toggle + CTA */}
