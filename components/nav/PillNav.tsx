@@ -142,6 +142,7 @@ export function PillNav({
       <motion.div
         aria-hidden="true"
         className="absolute top-0 left-0 rounded-full bg-[var(--fg)] pointer-events-none z-0"
+        style={{ pointerEvents: "none" }}
         initial={false}
         animate={{
           x: indicator.x,
@@ -170,10 +171,10 @@ export function PillNav({
             onBlur={() => setFocusedIndex(null)}
             aria-current={isActive ? "page" : undefined}
             className={cn(
-              "relative z-10 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm font-medium transition-colors duration-200 outline-none select-none",
+              "relative z-10 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm font-medium transition-colors duration-200 outline-none select-none cursor-pointer",
               "focus-visible:ring-2 focus-visible:ring-[var(--signal)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--surface-2)]",
               isTarget
-                ? "text-[var(--bg)] font-semibold"
+                ? "text-[var(--bg)] font-medium"
                 : "text-[var(--fg-muted)] hover:text-[var(--fg)]"
             )}
           >
