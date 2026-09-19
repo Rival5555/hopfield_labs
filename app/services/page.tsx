@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Globe, Smartphone, Sparkles, Brain, GraduationCap, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 
 const SERVICES_DETAILED = [
   {
@@ -110,7 +109,7 @@ export default function ServicesPage() {
       </div>
 
       <div className="space-y-8">
-        {SERVICES_DETAILED.map((service, idx) => {
+        {SERVICES_DETAILED.map((service) => {
           const Icon = service.icon;
           return (
             <Card key={service.slug} className="p-6 md:p-8 space-y-6">

@@ -23,6 +23,7 @@ Rules:
 `;
 
 export async function POST(req: NextRequest) {
+  void SYSTEM_KNOWLEDGE;
   try {
     const ip = req.headers.get("x-forwarded-for") || "unknown-ip";
     const now = Date.now();

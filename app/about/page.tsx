@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Terminal, Cpu, Users, Award, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ShieldCheck, Terminal, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const PRINCIPLES = [

@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Terminal, Send, Sparkles, Bot, User, RotateCcw } from "lucide-react";
+import { Send, Sparkles, Bot, User, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";

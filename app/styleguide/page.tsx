@@ -17,11 +17,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { AttractorField } from "@/components/motif/attractor-field";
 import {
   ArrowRight,
-  CheckCircle2,
-  Terminal,
   Cpu,
   Layers,
-  Sparkles,
   Zap,
   Activity,
   AlertTriangle,

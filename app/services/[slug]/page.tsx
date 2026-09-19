@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, CheckCircle2, ShieldCheck, Clock, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Zap } from "lucide-react";
 import { SERVICES_DETAILED } from "@/lib/services-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";

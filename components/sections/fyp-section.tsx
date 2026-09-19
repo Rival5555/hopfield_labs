@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap, ArrowRight, FileCheck, Code2, BookOpen, Mic } from "lucide-react";
+import { GraduationCap, FileCheck, Code2, BookOpen, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SectionReveal } from "@/components/section-reveal";

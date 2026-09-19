@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ExternalLink, Activity, ShieldCheck, Database } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -75,7 +74,7 @@ export default function WorkPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {ALL_PROJECTS.map((project, idx) => (
+        {ALL_PROJECTS.map((project) => (
           <Card key={project.slug} className="flex flex-col justify-between p-5 sm:p-6 md:p-8 space-y-6">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
