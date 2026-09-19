@@ -46,10 +46,15 @@ export function Navbar() {
   ) => {
     if (pathname === "/") {
       e.preventDefault();
-      const el = document.getElementById(targetId);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-        window.history.pushState(null, "", `#${targetId}`);
+      if (targetId === "hero") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.history.pushState(null, "", "/");
+      } else {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState(null, "", `#${targetId}`);
+        }
       }
     }
   };
@@ -70,6 +75,13 @@ export function Navbar() {
         {/* Wordmark logo */}
         <Link
           href="/"
+          onClick={(e) => {
+            if (pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.history.pushState(null, "", "/");
+            }
+          }}
           className="group flex items-center gap-2.5 font-mono text-sm tracking-[0.16em] uppercase font-bold text-[var(--fg)] hover:text-white transition-colors"
         >
           <Logo
@@ -89,12 +101,12 @@ export function Navbar() {
         {/* Desktop actions: Theme toggle + CTA */}
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
-          <Link href="/start">
-            <Button size="sm" variant="default" className="gap-1.5 h-9 font-medium">
+          <Button asChild size="sm" variant="default" className="gap-1.5 h-9 font-medium">
+            <Link href="/start" prefetch={true}>
               <span>Start a project</span>
               <ArrowRight className="h-3.5 w-3.5" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
 
         {/* Mobile menu trigger */}
@@ -152,12 +164,12 @@ export function Navbar() {
                   </span>
                 </div>
                 <SheetClose asChild>
-                  <Link href="/start" className="w-full block">
-                    <Button className="w-full gap-2">
+                  <Button asChild className="w-full gap-2">
+                    <Link href="/start" prefetch={true} className="w-full">
                       <span>Start a project</span>
                       <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </SheetClose>
               </div>
             </SheetContent>

@@ -5,8 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   motion,
-  useMotionValue,
-  useSpring,
   useReducedMotion,
   type Transition,
 } from "framer-motion";
@@ -15,14 +13,15 @@ import { cn } from "@/lib/utils";
 export interface NavItem {
   label: string;
   href: string;
+  targetId?: string;
 }
 
 export const DEFAULT_NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Work", href: "/work" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "/#hero", targetId: "hero" },
+  { label: "Services", href: "/#services", targetId: "services" },
+  { label: "Work", href: "/#work", targetId: "work" },
+  { label: "About", href: "/#about", targetId: "about" },
+  { label: "Contact", href: "/#contact", targetId: "contact" },
 ];
 
 interface PillNavProps {
@@ -42,55 +41,69 @@ export function PillNav({
   const pathname = usePathname();
   const prefersReducedMotion = useReducedMotion();
 
-  // Find active route index
-  const activeIndex = React.useMemo(() => {
-    if (!pathname) return 0;
-    // Exact match first
-    const exactIdx = items.findIndex((item) => item.href === pathname);
-    if (exactIdx !== -1) return exactIdx;
-
-    // Sub-route match (e.g. /services/web-development matches /services)
-    const subIdx = items.findIndex(
-      (item) => item.href !== "/" && pathname.startsWith(item.href)
-    );
-    return subIdx !== -1 ? subIdx : 0;
-  }, [pathname, items]);
-
+  const [activeSection, setActiveSection] = React.useState<string>("hero");
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
   const [focusedIndex, setFocusedIndex] = React.useState<number | null>(null);
-  const [clickedIndex, setClickedIndex] = React.useState<number | null>(null);
   const [isPressed, setIsPressed] = React.useState(false);
 
-  // High-performance Framer Motion values for magnetic cursor-follow without React re-renders
-  const mouseOffsetX = useMotionValue(0);
-  const mouseOffsetY = useMotionValue(0);
-  const springOffsetX = useSpring(mouseOffsetX, {
-    stiffness: 400,
-    damping: 26,
-  });
-  const springOffsetY = useSpring(mouseOffsetY, {
-    stiffness: 400,
-    damping: 26,
-  });
-
-  // Sync clickedIndex with pathname changes
+  // Scrollspy on homepage to keep indicator synchronized with viewport
   React.useEffect(() => {
-    setClickedIndex(null);
-  }, [pathname]);
+    if (pathname !== "/") return;
 
-  // Global mouseup safeguard
-  React.useEffect(() => {
-    const handleGlobalMouseUp = () => setIsPressed(false);
-    window.addEventListener("mouseup", handleGlobalMouseUp);
-    return () => window.removeEventListener("mouseup", handleGlobalMouseUp);
-  }, []);
+    if (window.location.hash) {
+      const hashId = window.location.hash.replace("#", "");
+      if (items.some((item) => item.targetId === hashId)) {
+        setActiveSection(hashId);
+      }
+    }
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 160;
+      const sectionIds = ["contact", "about", "work", "services", "hero"];
+
+      for (const sId of sectionIds) {
+        const el = document.getElementById(sId);
+        if (el) {
+          const top = el.offsetTop;
+          if (scrollPosition >= top) {
+            setActiveSection(sId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname, items]);
+
+  // Find active route / section index
+  const activeIndex = React.useMemo(() => {
+    if (pathname === "/") {
+      const idx = items.findIndex((item) => item.targetId === activeSection);
+      return idx !== -1 ? idx : 0;
+    }
+
+    // Sub-route matching when on pages like /services, /work, etc.
+    const exactIdx = items.findIndex(
+      (item) =>
+        item.href === pathname ||
+        (item.targetId && pathname.startsWith(`/${item.targetId}`))
+    );
+    if (exactIdx !== -1) return exactIdx;
+
+    const subIdx = items.findIndex(
+      (item) => item.targetId && pathname.startsWith(`/${item.targetId}`)
+    );
+    return subIdx !== -1 ? subIdx : 0;
+  }, [pathname, activeSection, items]);
 
   // Target item index currently highlighted by indicator
   const targetIndex =
     hoveredIndex !== null
       ? hoveredIndex
-      : clickedIndex !== null
-      ? clickedIndex
       : focusedIndex !== null
       ? focusedIndex
       : activeIndex >= 0
@@ -137,7 +150,7 @@ export function PillNav({
     });
   }, [targetIndex]);
 
-  // Synchronous layout effect to measure without visual layout flash
+  // Measure synchronously to prevent layout flash
   useIsomorphicLayoutEffect(() => {
     updateIndicatorPosition();
   }, [updateIndicatorPosition]);
@@ -152,46 +165,37 @@ export function PillNav({
     return () => window.removeEventListener("resize", handleResize);
   }, [updateIndicatorPosition]);
 
-  // Handle magnetic cursor-follow movement directly on MotionValues
-  const updateCursorMagneticPull = React.useCallback(
-    (clientX: number, clientY: number, activeIdx: number | null) => {
-      if (prefersReducedMotion || activeIdx === null) return;
-      const targetEl = itemRefs.current[activeIdx];
-      if (!targetEl) return;
+  // Global mouseup safeguard
+  React.useEffect(() => {
+    const handleGlobalMouseUp = () => setIsPressed(false);
+    window.addEventListener("mouseup", handleGlobalMouseUp);
+    return () => window.removeEventListener("mouseup", handleGlobalMouseUp);
+  }, []);
 
-      const rect = targetEl.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
+  const handleItemClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    item: NavItem
+  ) => {
+    if (pathname === "/") {
+      if (item.targetId) {
+        e.preventDefault();
+        setActiveSection(item.targetId);
+        setHoveredIndex(null);
 
-      // Magnetic pull toward cursor (up to ±12px X, ±4px Y)
-      const deltaX = (clientX - centerX) * 0.32;
-      const deltaY = (clientY - centerY) * 0.32;
-      const clampedX = Math.max(-12, Math.min(12, deltaX));
-      const clampedY = Math.max(-4, Math.min(4, deltaY));
-
-      mouseOffsetX.set(clampedX);
-      mouseOffsetY.set(clampedY);
-    },
-    [prefersReducedMotion, mouseOffsetX, mouseOffsetY]
-  );
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    updateCursorMagneticPull(e.clientX, e.clientY, targetIndex);
+        if (item.targetId === "hero") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          window.history.pushState(null, "", "/");
+        } else {
+          const el = document.getElementById(item.targetId);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", `#${item.targetId}`);
+          }
+        }
+      }
+    }
   };
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    setIsPressed(true);
-    updateCursorMagneticPull(e.clientX, e.clientY, targetIndex);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
-    mouseOffsetX.set(0);
-    mouseOffsetY.set(0);
-    setIsPressed(false);
-  };
-
-  // Clicking directly on the navigation bar padding snaps to the nearest item
   const handleContainerClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target !== containerRef.current) return;
 
@@ -207,26 +211,45 @@ export function PillNav({
       }
     });
 
-    setClickedIndex(closestIdx);
-    updateCursorMagneticPull(e.clientX, e.clientY, closestIdx);
-    itemRefs.current[closestIdx]?.click();
+    const targetItem = items[closestIdx];
+    if (targetItem) {
+      if (pathname === "/" && targetItem.targetId) {
+        setActiveSection(targetItem.targetId);
+        setHoveredIndex(null);
+        if (targetItem.targetId === "hero") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          window.history.pushState(null, "", "/");
+        } else {
+          const el = document.getElementById(targetItem.targetId);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", `#${targetItem.targetId}`);
+          }
+        }
+      } else {
+        itemRefs.current[closestIdx]?.click();
+      }
+    }
   };
 
+  // High-performance snappy spring for instant feedback
   const transitionConfig: Transition = prefersReducedMotion
     ? { duration: 0 }
     : {
         type: "spring",
-        stiffness: 400,
-        damping: 30,
-        mass: 0.7,
+        stiffness: 450,
+        damping: 32,
+        mass: 0.6,
       };
 
   return (
     <nav
       id={id}
       ref={containerRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      onMouseLeave={() => {
+        setHoveredIndex(null);
+        setIsPressed(false);
+      }}
       onClick={handleContainerClick}
       onMouseDown={() => setIsPressed(true)}
       onMouseUp={() => setIsPressed(false)}
@@ -236,7 +259,7 @@ export function PillNav({
       )}
       aria-label="Main"
     >
-      {/* Sliding indicator pill with cursor-follow magnetic dynamics */}
+      {/* Sliding indicator pill with instant physical spring */}
       <motion.div
         aria-hidden="true"
         className="absolute top-0 left-0 pointer-events-none z-0"
@@ -253,12 +276,8 @@ export function PillNav({
       >
         <motion.div
           className="w-full h-full rounded-full bg-[var(--fg)]"
-          style={{
-            x: springOffsetX,
-            y: springOffsetY,
-          }}
           animate={{
-            scale: isPressed ? 0.95 : 1,
+            scale: isPressed ? 0.96 : 1,
           }}
           transition={{ duration: 0.1 }}
         />
@@ -273,19 +292,17 @@ export function PillNav({
           <Link
             key={item.href}
             href={item.href}
+            prefetch={true}
             ref={(el) => {
               itemRefs.current[index] = el;
             }}
             onMouseEnter={() => setHoveredIndex(index)}
-            onClick={() => {
-              setClickedIndex(index);
-              setHoveredIndex(index);
-            }}
+            onClick={(e) => handleItemClick(e, item)}
             onFocus={() => setFocusedIndex(index)}
             onBlur={() => setFocusedIndex(null)}
             aria-current={isActive ? "page" : undefined}
             className={cn(
-              "relative z-10 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm font-medium transition-colors duration-200 outline-none select-none cursor-pointer",
+              "relative z-10 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm font-medium transition-colors duration-150 outline-none select-none cursor-pointer",
               "focus-visible:ring-2 focus-visible:ring-[var(--signal)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--surface-2)]",
               isTarget
                 ? "text-[var(--bg)] font-medium"
@@ -299,4 +316,3 @@ export function PillNav({
     </nav>
   );
 }
-

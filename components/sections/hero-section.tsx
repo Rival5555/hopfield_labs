@@ -6,7 +6,7 @@ import { AttractorField } from "@/components/motif/attractor-field";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[calc(100dvh-4rem)] flex items-center justify-center overflow-hidden pt-12 pb-24 md:py-32">
+    <section id="hero" className="relative min-h-[calc(100dvh-4rem)] flex items-center justify-center overflow-hidden pt-12 pb-24 md:py-32">
       {/* Faint radial glow top-center (accent at 6% opacity) */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] pointer-events-none -z-10"
