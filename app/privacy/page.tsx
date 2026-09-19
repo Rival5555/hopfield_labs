@@ -65,17 +65,64 @@ export default function PrivacyPolicyPage() {
           <span>•</span>
           <span>SCOPE: HOPFIELDLABS.COM</span>
         </div>
-        <p className="body-text text-base leading-relaxed pt-2">
-          Hopfield Labs (&quot;we,&quot; &quot;us,&quot; &quot;our&quot;) provides high-performance web development,
-          native mobile app development, GenAI integration, applied AI/ML systems, and academic capstone (FYP) mentoring.
-          This policy explains what information we collect through{" "}
-          <strong className="text-[var(--fg)] font-medium">hopfieldlabs.com</strong>, how we process and protect it,
-          and the rights you hold regarding your personal data.
-        </p>
+        {/* High-impact, engaging introductory narrative */}
+        <div className="space-y-3 pt-2">
+          <p className="text-base sm:text-lg text-[var(--fg)] leading-relaxed font-normal">
+            At <strong className="font-semibold text-[var(--signal)]">Hopfield Labs</strong>, privacy and data integrity are fundamental to how we engineer systems. We design our client intake pipelines, storage buckets, and web applications with strict confidentiality and minimal telemetry.
+          </p>
+          <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
+            This Privacy Policy details how we handle information submitted through{" "}
+            <strong className="text-[var(--fg)] font-medium">hopfieldlabs.com</strong>, our multi-step intake estimator, and our live GenAI demonstration terminal. It explains where your technical data is persisted, how long it is retained, and how you can exercise your statutory privacy rights.
+          </p>
+        </div>
+
+        {/* Core Privacy Commitments */}
+        <div className="space-y-3 pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="p-3.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-1">
+              <div className="font-mono text-xs font-semibold text-[var(--fg)] flex items-center gap-1.5">
+                <Shield className="h-3.5 w-3.5 text-[var(--signal)]" />
+                <span>Zero Data Monetization</span>
+              </div>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+                We do not sell, rent, or commercialize client inquiries, briefs, or contact records under any circumstance.
+              </p>
+            </div>
+
+            <div className="p-3.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-1">
+              <div className="font-mono text-xs font-semibold text-[var(--fg)] flex items-center gap-1.5">
+                <Lock className="h-3.5 w-3.5 text-[var(--signal)]" />
+                <span>Isolated Private Storage</span>
+              </div>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+                Form data and briefs are secured by Supabase Row-Level Security (RLS) and authenticated private buckets.
+              </p>
+            </div>
+
+            <div className="p-3.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-1">
+              <div className="font-mono text-xs font-semibold text-[var(--fg)] flex items-center gap-1.5">
+                <Database className="h-3.5 w-3.5 text-[var(--signal)]" />
+                <span>Automated Draft Pruning</span>
+              </div>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+                Uncompleted intake drafts and temporary resume tokens are automatically purged after 14 calendar days.
+              </p>
+            </div>
+
+            <div className="p-3.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-1">
+              <div className="font-mono text-xs font-semibold text-[var(--fg)] flex items-center gap-1.5">
+                <Server className="h-3.5 w-3.5 text-[var(--signal)]" />
+                <span>Cookieless Analytics</span>
+              </div>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+                We use privacy-friendly edge telemetry with zero third-party marketing trackers and zero cross-site cookies.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="p-4 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface-2)] text-xs text-[var(--fg-muted)] leading-relaxed">
-          <span className="font-semibold text-[var(--fg)]">Contractual Scope:</span> This policy strictly applies to our public website,
-          the interactive GenAI concierge demo, and our multi-step project intake pipeline. Commercial engagements and engineering deliverables
-          are independently governed by dedicated Master Services Agreements (MSA) and IP assignment contracts.
+          <span className="font-semibold text-[var(--fg)]">Contractual Scope:</span> This policy strictly applies to our public website, the interactive GenAI concierge demo, and our multi-step project intake pipeline. Commercial engagements and engineering deliverables are independently governed by dedicated Master Services Agreements (MSA) and IP assignment contracts.
         </div>
       </header>
 

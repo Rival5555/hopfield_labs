@@ -11,6 +11,10 @@ import {
   ShieldAlert,
   HelpCircle,
   FileCheck,
+  ShieldCheck,
+  Lock,
+  Sparkles,
+  CheckCircle2,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -34,33 +38,90 @@ export default function TermsOfServicePage() {
       </div>
 
       {/* Header */}
-      <header className="space-y-4 border-b border-[var(--border)] pb-8">
+      <header className="space-y-6 border-b border-[var(--border)] pb-8">
         <div className="eyebrow text-[var(--signal)] flex items-center gap-2">
           <Scale className="h-4 w-4" />
           <span>LEGAL SPECIFICATION // TERMS OF ENGAGEMENT &amp; SERVICE</span>
         </div>
-        <h1 className="section-heading text-[var(--fg)] text-3xl sm:text-4xl font-semibold">
-          Terms of Service
-        </h1>
-        <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-[var(--fg-muted)]">
-          <span>EFFECTIVE DATE: SEPTEMBER 20, 2026</span>
-          <span>•</span>
-          <span>REVISION: V1.2</span>
-          <span>•</span>
-          <span>SCOPE: HOPFIELDLABS.COM</span>
+
+        <div className="space-y-2">
+          <h1 className="section-heading text-[var(--fg)] text-3xl sm:text-4xl font-semibold tracking-tight">
+            Terms of Service
+          </h1>
+          <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[var(--fg-muted)]">
+            <span className="text-[var(--signal)] font-medium">EFFECTIVE: SEPTEMBER 20, 2026</span>
+            <span>•</span>
+            <span>REVISION: V1.3</span>
+            <span>•</span>
+            <span>SCOPE: HOPFIELDLABS.COM</span>
+          </div>
         </div>
-        <p className="body-text text-base leading-relaxed pt-2">
-          These Terms of Service (&quot;Terms&quot;) govern your use of{" "}
-          <strong className="text-[var(--fg)] font-medium">hopfieldlabs.com</strong> (the &quot;Site&quot;)
-          and your commercial or academic engagement with Hopfield Labs (&quot;we,&quot; &quot;us,&quot; &quot;our&quot;)
-          for web development, native mobile app engineering, GenAI integration, applied AI/ML systems, and
-          final-year-project (FYP) mentoring (collectively, &quot;Services&quot;).
-        </p>
-        <div className="p-4 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface-2)] text-xs text-[var(--fg-muted)] leading-relaxed">
-          <span className="font-semibold text-[var(--fg)]">Precedence of Commercial Agreements:</span> If you engage us
-          for a scoped project, a formal Master Services Agreement (MSA), Statement of Work (SOW), or written engineering
-          proposal governs that engagement. Where any provision of an executed commercial agreement conflicts with these
-          Site Terms, the specific project agreement controls.
+
+        {/* High-impact, engaging introductory narrative */}
+        <div className="space-y-3 pt-2">
+          <p className="text-base sm:text-lg text-[var(--fg)] leading-relaxed font-normal">
+            Welcome to <strong className="font-semibold text-[var(--signal)]">Hopfield Labs</strong>. We partner with ambitious founders, engineering teams, and academic researchers to architect, build, and deploy production-grade web platforms, native mobile applications, GenAI systems, and applied AI/ML architectures.
+          </p>
+          <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
+            These Terms establish clear, mutual expectations for using <strong className="text-[var(--fg)] font-medium">hopfieldlabs.com</strong>, evaluating our technical case studies, and interacting with our live demonstrations. When you commission our studio for dedicated software deliverables or capstone mentoring, your engagement is additionally governed by a formal Master Services Agreement (MSA) or Statement of Work (SOW).
+          </p>
+        </div>
+
+        {/* Core Principles at a Glance */}
+        <div className="space-y-3 pt-2">
+          <div className="text-xs font-mono text-[var(--fg)] font-semibold flex items-center gap-2">
+            <Sparkles className="h-3.5 w-3.5 text-[var(--signal)]" />
+            <span>CORE PRINCIPLES AT A GLANCE</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="p-3.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-1">
+              <div className="font-mono text-xs font-semibold text-[var(--fg)] flex items-center gap-1.5">
+                <CheckCircle2 className="h-3.5 w-3.5 text-[var(--signal)]" />
+                <span>Exploratory &amp; Non-Binding</span>
+              </div>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+                Browsing our work, testing the estimator, or submitting an intake brief never locks you into a contract. Formal work begins only after mutual signature of a scoped proposal.
+              </p>
+            </div>
+
+            <div className="p-3.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-1">
+              <div className="font-mono text-xs font-semibold text-[var(--fg)] flex items-center gap-1.5">
+                <Layers className="h-3.5 w-3.5 text-[var(--signal)]" />
+                <span>100% Deliverable Ownership</span>
+              </div>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+                You own what you pay for. All bespoke codebases, schemas, and assets built specifically for your project transfer unreservedly to you upon final invoice settlement.
+              </p>
+            </div>
+
+            <div className="p-3.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-1">
+              <div className="font-mono text-xs font-semibold text-[var(--fg)] flex items-center gap-1.5">
+                <GraduationCap className="h-3.5 w-3.5 text-[var(--signal)]" />
+                <span>Academic Honor &amp; Integrity</span>
+              </div>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+                Capstone (FYP) students receive high-caliber engineering advisory while retaining sole responsibility for complying with their institution&apos;s originality and honor policies.
+              </p>
+            </div>
+
+            <div className="p-3.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-1">
+              <div className="font-mono text-xs font-semibold text-[var(--fg)] flex items-center gap-1.5">
+                <Lock className="h-3.5 w-3.5 text-[var(--signal)]" />
+                <span>Confidential Discovery</span>
+              </div>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+                Your briefs, repository links, and product architectures are treated with strict confidentiality. Bilateral NDAs are happily executed prior to in-depth technical discovery.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Commercial Precedence Notice */}
+        <div className="p-4 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface-2)] text-xs text-[var(--fg-muted)] leading-relaxed flex items-start gap-3">
+          <ShieldCheck className="h-4 w-4 text-[var(--signal)] shrink-0 mt-0.5" />
+          <div>
+            <span className="font-semibold text-[var(--fg)]">Commercial Agreement Precedence:</span> When you engage our engineering team for paid development sprints, your project is governed by a dedicated Master Services Agreement (MSA) and Statement of Work (SOW). Where any term in an executed client contract differs from these website terms, your signed contract takes precedence.
+          </div>
         </div>
       </header>
 
@@ -73,8 +134,7 @@ export default function TermsOfServicePage() {
             Use of the Site &amp; Acceptable Behavior
           </h2>
           <p>
-            You are granted a revocable, non-exclusive license to access the Site to explore our capabilities, review
-            case studies, submit technical project inquiries, and test our interactive GenAI demonstration terminal.
+            You are welcome to browse our studio case studies, evaluate technical benchmarks, use our project intake tool, and interact with the live GenAI terminal. We ask all visitors and prospective partners to engage with our systems responsibly.
           </p>
           <div className="p-4 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-2">
             <div className="font-mono text-xs font-semibold text-[var(--fg)] flex items-center gap-2">
@@ -104,8 +164,7 @@ export default function TermsOfServicePage() {
             The Project Intake &amp; Estimator Protocol
           </h2>
           <p>
-            Initiating the &quot;Start a Project&quot; flow, submitting an intake form, booking a calendar discovery
-            session, or exchanging preliminary correspondence constitutes a <strong>non-binding scoping inquiry</strong>.
+            Our multi-step intake flow and interactive budget estimator provide instant architectural feedback and indicative timelines. These automated figures are designed to help you calibrate expectations—they are non-binding estimates, not formal quotes.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             <div className="p-4 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-2">
@@ -174,7 +233,7 @@ export default function TermsOfServicePage() {
             Payment Structures &amp; Commercial Terms
           </h2>
           <p>
-            Commercial engagements are invoiced according to the fee structure designated in your approved project proposal:
+            Every client project operates under a transparent, milestone-driven structure designated in your approved project proposal:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
             <div className="p-3.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] space-y-1.5">
