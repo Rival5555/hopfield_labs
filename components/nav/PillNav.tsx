@@ -42,11 +42,10 @@ export function PillNav({
   const prefersReducedMotion = useReducedMotion();
 
   const [activeSection, setActiveSection] = React.useState<string>("hero");
-  const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
-  const [focusedIndex, setFocusedIndex] = React.useState<number | null>(null);
   const [isPressed, setIsPressed] = React.useState(false);
+  const isManualClickRef = React.useRef(false);
 
-  // Scrollspy on homepage to keep indicator synchronized with viewport
+  // Scrollspy on homepage to keep indicator synchronized with viewport on manual scroll
   React.useEffect(() => {
     if (pathname !== "/") return;
 
@@ -58,6 +57,9 @@ export function PillNav({
     }
 
     const handleScroll = () => {
+      // Don't override active section while smooth scrolling from a manual click
+      if (isManualClickRef.current) return;
+
       const scrollPosition = window.scrollY + 160;
       const sectionIds = ["contact", "about", "work", "services", "hero"];
 
@@ -100,15 +102,8 @@ export function PillNav({
     return subIdx !== -1 ? subIdx : 0;
   }, [pathname, activeSection, items]);
 
-  // Target item index currently highlighted by indicator
-  const targetIndex =
-    hoveredIndex !== null
-      ? hoveredIndex
-      : focusedIndex !== null
-      ? focusedIndex
-      : activeIndex >= 0
-      ? activeIndex
-      : null;
+  // Indicator strictly tracks activeIndex — zero movement on cursor hover
+  const targetIndex = activeIndex >= 0 ? activeIndex : null;
 
   const itemRefs = React.useRef<(HTMLAnchorElement | null)[]>([]);
   const containerRef = React.useRef<HTMLDivElement | null>(null);
@@ -179,8 +174,12 @@ export function PillNav({
     if (pathname === "/") {
       if (item.targetId) {
         e.preventDefault();
+        isManualClickRef.current = true;
         setActiveSection(item.targetId);
-        setHoveredIndex(null);
+
+        setTimeout(() => {
+          isManualClickRef.current = false;
+        }, 900);
 
         if (item.targetId === "hero") {
           window.scrollTo({ top: 0, behavior: "smooth" });
@@ -214,8 +213,13 @@ export function PillNav({
     const targetItem = items[closestIdx];
     if (targetItem) {
       if (pathname === "/" && targetItem.targetId) {
+        isManualClickRef.current = true;
         setActiveSection(targetItem.targetId);
-        setHoveredIndex(null);
+
+        setTimeout(() => {
+          isManualClickRef.current = false;
+        }, 900);
+
         if (targetItem.targetId === "hero") {
           window.scrollTo({ top: 0, behavior: "smooth" });
           window.history.pushState(null, "", "/");
@@ -232,7 +236,7 @@ export function PillNav({
     }
   };
 
-  // High-performance snappy spring for instant feedback
+  // High-performance snappy spring for instant feedback on click
   const transitionConfig: Transition = prefersReducedMotion
     ? { duration: 0 }
     : {
@@ -246,10 +250,7 @@ export function PillNav({
     <nav
       id={id}
       ref={containerRef}
-      onMouseLeave={() => {
-        setHoveredIndex(null);
-        setIsPressed(false);
-      }}
+      onMouseLeave={() => setIsPressed(false)}
       onClick={handleContainerClick}
       onMouseDown={() => setIsPressed(true)}
       onMouseUp={() => setIsPressed(false)}
@@ -259,7 +260,7 @@ export function PillNav({
       )}
       aria-label="Main"
     >
-      {/* Sliding indicator pill with instant physical spring */}
+      {/* Sliding indicator pill — moves strictly on click/active section */}
       <motion.div
         aria-hidden="true"
         className="absolute top-0 left-0 pointer-events-none z-0"
@@ -285,7 +286,6 @@ export function PillNav({
 
       {/* Nav items */}
       {items.map((item, index) => {
-        const isTarget = targetIndex === index;
         const isActive = activeIndex === index;
 
         return (
@@ -296,15 +296,12 @@ export function PillNav({
             ref={(el) => {
               itemRefs.current[index] = el;
             }}
-            onMouseEnter={() => setHoveredIndex(index)}
             onClick={(e) => handleItemClick(e, item)}
-            onFocus={() => setFocusedIndex(index)}
-            onBlur={() => setFocusedIndex(null)}
             aria-current={isActive ? "page" : undefined}
             className={cn(
               "relative z-10 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm font-medium transition-colors duration-150 outline-none select-none cursor-pointer",
               "focus-visible:ring-2 focus-visible:ring-[var(--signal)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--surface-2)]",
-              isTarget
+              isActive
                 ? "text-[var(--bg)] font-medium"
                 : "text-[var(--fg-muted)] hover:text-[var(--fg)]"
             )}
