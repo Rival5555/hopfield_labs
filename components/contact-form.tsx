@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CheckCircle2, AlertCircle, Send, ArrowRight } from "lucide-react";
+import { CheckCircle2, AlertCircle, Send } from "lucide-react";
 import { contactSchema, type ContactFormData, type ContactActionResult } from "@/lib/schemas";
 import { submitContactLead } from "@/app/actions/contact";
 import { Button } from "@/components/ui/button";

@@ -9,7 +9,6 @@ import {
   BudgetId,
   HEARD_FROM_OPTIONS,
   contactStepSchema,
-  SERVICE_OPTIONS,
 } from "@/lib/intake-types";
 import { createAttachmentUploadUrl, submitIntakeLead } from "@/app/actions/intake";
 import { Button } from "@/components/ui/button";
@@ -22,10 +21,8 @@ import {
   Send,
   Calendar,
   AlertCircle,
-  CheckCircle2,
   Paperclip,
   Link as LinkIcon,
-  HelpCircle,
   RefreshCw,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -114,7 +111,6 @@ export function StepContact({
   const {
     register,
     handleSubmit,
-    watch,
     getValues,
     formState: { errors },
   } = useForm<ContactFormFields>({
@@ -248,7 +244,7 @@ export function StepContact({
 
         xhr.send(file);
       }
-    } catch (err: unknown) {
+    } catch {
       setUploadedFiles((prev) =>
         prev.map((item) =>
           item.id === fileId
@@ -338,6 +334,7 @@ export function StepContact({
   // Lazy-load Cal.com embed only when toggled
   React.useEffect(() => {
     if (showCalBooking && !calLoaded) {
+      /* eslint-disable @typescript-eslint/no-explicit-any, prefer-const, prefer-rest-params */
       // Dynamically load Cal embed script
       (function (C: any, A: any, L: any) {
         let p = function (a: any, ar: any) {
@@ -392,6 +389,7 @@ export function StepContact({
             const completedPaths = uploadedFiles
               .filter((f) => f.status === "completed" && f.storagePath)
               .map((f) => f.storagePath as string);
+      /* eslint-enable @typescript-eslint/no-explicit-any, prefer-const, prefer-rest-params */
 
             await submitIntakeLead({
               name: formValues.name || "Calendly Lead",

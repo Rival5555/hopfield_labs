@@ -26,8 +26,6 @@ import {
   Bookmark,
   CheckCircle2,
   Calendar,
-  Send,
-  Sparkles,
   Mail,
   Loader2,
 } from "lucide-react";

@@ -45,6 +45,7 @@ export async function createAttachmentUploadUrl(
   isMock?: boolean;
   error?: string;
 }> {
+  void fileType;
   try {
     // Validate file extension
     const allowedExtensions = [".pdf", ".doc", ".docx", ".png", ".jpg", ".jpeg"];
