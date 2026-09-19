@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/start",
     "/styleguide",
+    "/privacy",
   ];
 
   return routes.map((route) => ({
