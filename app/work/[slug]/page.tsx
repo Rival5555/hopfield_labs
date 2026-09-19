@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ShieldCheck, Activity, Database, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Activity } from "lucide-react";
 import { ALL_PROJECTS } from "@/lib/work-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -112,7 +112,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         <div className="space-y-1 text-center sm:text-left">
           <div className="eyebrow text-[var(--signal)]">SIMILAR SPECIFICATIONS?</div>
           <h3 className="text-xl font-medium text-[var(--fg)]">
-            Let's engineer your solution
+            Let&apos;s engineer your solution
           </h3>
           <p className="text-sm text-[var(--fg-muted)]">
             Discuss your architecture, timeline, and deliverables with our team.

@@ -77,7 +77,7 @@ export function ProcessSection() {
                       <Icon className="h-5 w-5 text-[var(--accent)]" />
                     </div>
                     <span className="font-mono text-xs font-semibold text-[var(--signal)]">
-                      {step.number} //
+                      {step.number} {"//"}
                     </span>
                   </div>
 
