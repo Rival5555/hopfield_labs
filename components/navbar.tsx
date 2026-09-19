@@ -21,6 +21,8 @@ import { PillNav } from "@/components/nav/PillNav";
 const NAV_LINKS = [
   { href: "/#services", label: "Services", targetId: "services" },
   { href: "/#work", label: "Work", targetId: "work" },
+  { href: "/jobs", label: "Jobs" },
+  { href: "/blog", label: "Blog" },
   { href: "/#about", label: "About", targetId: "about" },
   { href: "/#contact", label: "Contact", targetId: "contact" },
 ];
@@ -42,9 +44,9 @@ export function Navbar() {
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    targetId: string
+    targetId?: string
   ) => {
-    if (pathname === "/") {
+    if (pathname === "/" && targetId) {
       e.preventDefault();
       if (targetId === "hero") {
         window.scrollTo({ top: 0, behavior: "smooth" });

@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/styleguide",
     "/privacy",
     "/terms",
+    "/jobs",
+    "/blog",
   ];
 
   return routes.map((route) => ({

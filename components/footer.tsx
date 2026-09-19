@@ -100,6 +100,23 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/jobs"
+                  className="text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors flex items-center justify-between"
+                >
+                  <span>Jobs &amp; Careers</span>
+                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[var(--surface-2)] text-[var(--signal)]">HIRING</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors"
+                >
+                  Engineering Blog
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors"
                 >

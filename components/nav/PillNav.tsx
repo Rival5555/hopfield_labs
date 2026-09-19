@@ -20,6 +20,8 @@ export const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/#hero", targetId: "hero" },
   { label: "Services", href: "/#services", targetId: "services" },
   { label: "Work", href: "/#work", targetId: "work" },
+  { label: "Jobs", href: "/jobs" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/#about", targetId: "about" },
   { label: "Contact", href: "/#contact", targetId: "contact" },
 ];
@@ -88,10 +90,11 @@ export function PillNav({
       return idx !== -1 ? idx : 0;
     }
 
-    // Sub-route matching when on pages like /services, /work, etc.
+    // Sub-route matching when on pages like /services, /work, /jobs, /blog
     const exactIdx = items.findIndex(
       (item) =>
         item.href === pathname ||
+        (item.href !== "/" && pathname.startsWith(item.href)) ||
         (item.targetId && pathname.startsWith(`/${item.targetId}`))
     );
     if (exactIdx !== -1) return exactIdx;
@@ -299,7 +302,7 @@ export function PillNav({
             onClick={(e) => handleItemClick(e, item)}
             aria-current={isActive ? "page" : undefined}
             className={cn(
-              "relative z-10 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm font-medium transition-colors duration-150 outline-none select-none cursor-pointer",
+              "relative z-10 px-3 py-1.5 sm:px-3.5 sm:py-2 lg:px-4.5 lg:py-2 rounded-full text-xs sm:text-sm font-medium transition-colors duration-150 outline-none select-none cursor-pointer whitespace-nowrap",
               "focus-visible:ring-2 focus-visible:ring-[var(--signal)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--surface-2)]",
               isActive
                 ? "text-[var(--bg)] font-medium"
